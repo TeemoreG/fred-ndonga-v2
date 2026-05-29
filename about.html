@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Fred Ndonga | About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --gold:#c9a04c;
+  --gold2:#dab866;
+  --card-bg-dark:#1a2744;
+  --card-bg-dark-light:#23305c;
+  --body-bg:#f4f6fa;
+  --text-dark:#1a2744;
+  --text-light:#cbd5e1;
+  --white:#ffffff;
+  --border-light:rgba(0,0,0,0.08);
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  background:var(--body-bg);
+  color:var(--text-dark);
+  overflow-x:hidden;
+  cursor:none;
+}
+h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-header h2{
+  font-family:'Poppins','Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.cursor-dot{
+  width:8px;
+  height:8px;
+  background:var(--gold);
+  border-radius:50%;
+  position:fixed;
+  top:0;left:0;
+  transform:translate(-50%,-50%);
+  transition:transform 0.1s ease;
+  pointer-events:none;
+  z-index:99999;
+}
+.cursor-ring{
+  width:36px;
+  height:36px;
+  border:1.5px solid rgba(201,160,76,0.6);
+  border-radius:50%;
+  position:fixed;
+  top:0;left:0;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  z-index:99998;
+  transition:width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+.cursor-ring.hovered{
+  width:60px;
+  height:60px;
+  border-color:var(--gold);
+  background:rgba(201,160,76,0.05);
+}
+#particles{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  pointer-events:none;
+  z-index:0;
+  opacity:0.12;
+}
+.spotlight{
+  position:fixed;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(201,160,76,0.06) 0%, transparent 70%);
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  z-index:1;
+  transition:left 0.2s ease, top 0.2s ease;
+}
+::-webkit-scrollbar{
+  width:6px;
+}
+::-webkit-scrollbar-thumb{
+  background:var(--gold);
+  border-radius:10px;
+}
+.container{
+  width:100%;
+  max-width:1280px;
+  margin:auto;
+  padding:0 30px;
+  position:relative;
+  z-index:2;
+}
+.top-bar{
+  background:var(--white);
+  border-bottom:1px solid var(--border-light);
+  padding:10px 0;
+  position:relative;
+  z-index:1001;
+}
+.top-bar .container{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:25px;
+}
+.top-contact{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.top-contact a{
+  color:#4a5568;
+  text-decoration:none;
+  font-size:0.85rem;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:color 0.3s ease;
+}
+.top-contact a i{
+  color:var(--gold);
+  font-size:0.9rem;
+}
+.top-contact a:hover{
+  color:var(--gold);
+}
+.navbar{
+  position:fixed;
+  width:100%;
+  top:41px;
+  z-index:999;
+  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.95);
+  border-bottom:1px solid var(--border-light);
+  transition:all 0.3s ease;
+}
+.navbar.scrolled{
+  top:0;
+  background:rgba(255,255,255,0.98);
+  box-shadow:0 4px 30px rgba(0,0,0,0.08);
+}
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.logo img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+  background:var(--card-bg-dark);
+  padding:3px;
+  border:1px solid var(--gold);
+  transition:transform 0.3s ease;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.logo img:hover{
+  transform:scale(1.05);
+}
+.logo h2{
+  font-size:1.3rem;
+  font-weight:700;
+  letter-spacing:-0.5px;
+  color:var(--text-dark);
+}
+.logo span{
+  font-size:.75rem;
+  color:var(--gold);
+  letter-spacing:1px;
+  font-weight:500;
+}
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+.nav-links a{
+  color:var(--text-dark);
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+  font-size:0.95rem;
+  letter-spacing:0.3px;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--gold);
+  transition:width 0.3s ease;
+}
+.nav-links a:hover::after{
+  width:100%;
+}
+.nav-links a:hover{
+  color:var(--gold);
+}
+.menu-toggle{
+  display:none;
+  font-size:1.5rem;
+  color:var(--text-dark);
+  cursor:pointer;
+  z-index:1000;
+}
+.btn{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--text-dark);
+  padding:12px 28px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  transition:all .3s ease;
+  display:inline-block;
+  border:none;
+  cursor:none;
+  letter-spacing:0.5px;
+  position:relative;
+  overflow:hidden;
+  font-size:0.9rem;
+  font-family:'Poppins','Montserrat',sans-serif;
+}
+.btn::after{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;
+  width:0;height:0;
+  background:rgba(255,255,255,0.3);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  transition:width 0.5s ease, height 0.5s ease;
+}
+.btn:active::after{
+  width:300px;height:300px;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(201,160,76,0.35), 0 0 0 1px rgba(201,160,76,0.3);
+}
+.btn-outline{
+  border:1.5px solid rgba(201,160,76,0.5);
+  padding:12px 28px;
+  border-radius:40px;
+  color:var(--text-dark);
+  text-decoration:none;
+  transition:.3s;
+  background:transparent;
+  font-weight:500;
+  position:relative;
+  overflow:hidden;
+  font-size:0.9rem;
+  font-family:'Poppins','Montserrat',sans-serif;
+}
+.btn-outline::before{
+  content:'';
+  position:absolute;
+  top:0;left:-100%;
+  width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(201,160,76,0.1),transparent);
+  transition:left 0.5s ease;
+}
+.btn-outline:hover::before{
+  left:100%;
+}
+.btn-outline:hover{
+  background:rgba(201,160,76,0.1);
+  border-color:var(--gold);
+  transform:translateY(-3px);
+}
+.page-hero{
+  min-height:60vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding-top:160px;
+  padding-bottom:60px;
+}
+.page-hero h1{
+  font-size:4rem;
+  margin-bottom:20px;
+  background:linear-gradient(135deg,var(--text-dark) 30%,#c9a04c 80%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.page-hero p{
+  color:#4a5568;
+  font-size:1.2rem;
+  max-width:700px;
+  margin:0 auto;
+}
+.section-header{
+  text-align:center;
+  margin-bottom:50px;
+}
+.section-header h2{
+  font-size:2.5rem;
+  margin-bottom:15px;
+  color:var(--text-dark);
+  font-weight:700;
+}
+.section-header .section-sub{
+  color:#4a5568;
+  font-size:1rem;
+  max-width:700px;
+  margin:0 auto;
+}
+.section-divider{
+  width:60px;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  border-radius:2px;
+  margin:20px auto 0;
+}
+.about-story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  margin:80px 0;
+  align-items:center;
+}
+.about-story-image img{
+  width:100%;
+  border-radius:30px;
+  border:1px solid rgba(201,160,76,0.2);
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+.about-story-content h2{
+  font-size:2rem;
+  margin-bottom:20px;
+  color:var(--gold);
+  font-style:normal;
+  font-weight:bold;
+}
+.about-story-content p{
+  color:#4a5568;
+  line-height:1.8;
+  margin-bottom:20px;
+  font-size:1rem;
+}
+.story-signature{
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid var(--border-light);
+  color:var(--gold);
+  font-style:italic;
+}
+.timeline-vertical{
+  position:relative;
+  max-width:800px;
+  margin:80px auto;
+  padding-left:40px;
+}
+.timeline-vertical::before{
+  content:'';
+  position:absolute;
+  left:20px;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:linear-gradient(180deg, var(--gold), var(--gold2), rgba(201,160,76,0.2));
+  border-radius:3px;
+}
+.timeline-node{
+  position:relative;
+  margin-bottom:60px;
+  padding-left:50px;
+}
+.timeline-node:last-child{
+  margin-bottom:0;
+}
+.timeline-dot{
+  position:absolute;
+  left:-5px;
+  top:0;
+  width:50px;
+  height:50px;
+  background:var(--white);
+  border:3px solid var(--gold);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:2;
+  box-shadow:0 0 0 8px rgba(201,160,76,0.1);
+  transition:all 0.3s ease;
+}
+.timeline-node:hover .timeline-dot{
+  transform:scale(1.1);
+  box-shadow:0 0 0 12px rgba(201,160,76,0.2);
+}
+.timeline-dot i{
+  font-size:1.2rem;
+  color:var(--gold);
+}
+.timeline-content{
+  background:var(--white);
+  border-radius:20px;
+  padding:25px;
+  border:1px solid var(--border-light);
+  transition:all 0.3s ease;
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
+.timeline-content:hover{
+  transform:translateX(8px);
+  background:var(--white);
+  border-color:rgba(201,160,76,0.3);
+  box-shadow:0 12px 24px rgba(0,0,0,0.08);
+}
+.timeline-year{
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--gold);
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+.timeline-content h3{
+  font-size:1.3rem;
+  margin-bottom:10px;
+  color:var(--text-dark);
+}
+.timeline-content p{
+  color:#4a5568;
+  line-height:1.6;
+  font-size:0.9rem;
+}
+.credentials-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  margin:80px 0;
+}
+.cred-card{
+  background:var(--white);
+  border-radius:24px;
+  padding:35px;
+  transition:all 0.3s ease;
+  text-align:center;
+  border:1px solid var(--border-light);
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
+.cred-card:hover{
+  transform:translateY(-5px);
+  background:var(--white);
+  border-color:rgba(201,160,76,0.3);
+  box-shadow:0 12px 24px rgba(0,0,0,0.08);
+}
+.cred-card img{
+  height:70px;
+  width:auto;
+  max-width:150px;
+  object-fit:contain;
+  margin-bottom:20px;
+}
+.cred-card h3{
+  font-size:1.4rem;
+  margin-bottom:15px;
+  color:var(--text-dark);
+}
+.cred-card p{
+  color:#4a5568;
+  line-height:1.7;
+  font-size:0.95rem;
+}
+.philosophy-section{
+  background:rgba(0,0,0,0.02);
+  border-radius:40px;
+  padding:60px;
+  margin:80px 0;
+  text-align:center;
+  border:1px solid var(--border-light);
+}
+.philosophy-section h2{
+  font-size:2.2rem;
+  margin-bottom:20px;
+  color:var(--text-dark);
+}
+.philosophy-quote{
+  font-size:1.4rem;
+  font-style:italic;
+  color:var(--gold);
+  margin-bottom:30px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.philosophy-text{
+  color:#4a5568;
+  line-height:1.8;
+  max-width:800px;
+  margin:0 auto;
+}
+.what-i-bring{
+  margin:80px 0;
+}
+.bring-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+.bring-card{
+  background:var(--card-bg-dark);
+  border-radius:24px;
+  padding:35px;
+  transition:all 0.3s ease;
+  border-left:4px solid var(--gold);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.bring-card:hover{
+  transform:translateY(-5px);
+  background:var(--card-bg-dark-light);
+  box-shadow:0 12px 24px rgba(0,0,0,0.15);
+}
+.bring-icon{
+  font-size:2.5rem;
+  color:var(--gold);
+  margin-bottom:20px;
+}
+.bring-card h3{
+  font-size:1.4rem;
+  margin-bottom:10px;
+  color:var(--white);
+}
+.bring-tagline{
+  font-size:0.85rem;
+  color:var(--gold);
+  margin-bottom:15px;
+  font-weight:500;
+}
+.bring-card p{
+  color:var(--text-light);
+  line-height:1.7;
+  font-size:0.9rem;
+  margin-bottom:15px;
+}
+.bring-list{
+  list-style:none;
+  padding-left:0;
+}
+.bring-list li{
+  color:var(--text-light);
+  font-size:0.85rem;
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.bring-list li i{
+  color:var(--gold);
+  font-size:0.75rem;
+}
+.trust-badge{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin:80px 0;
+  padding:40px;
+  border-top:1px solid var(--border-light);
+  border-bottom:1px solid var(--border-light);
+}
+.trust-item{
+  text-align:center;
+  transition:transform 0.3s ease;
+}
+.trust-item:hover{
+  transform:translateY(-5px);
+}
+.trust-item i{
+  font-size:2.5rem;
+  color:var(--gold);
+  margin-bottom:10px;
+  display:block;
+}
+.trust-item span{
+  display:block;
+  font-size:0.85rem;
+  color:#4a5568;
+}
+.partner-slider{
+  margin:80px 0;
+  text-align:center;
+}
+.partner-logos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.partner-item{
+  text-align:center;
+}
+.partner-item img{
+  height:50px;
+  width:auto;
+  max-width:120px;
+  object-fit:contain;
+  filter:brightness(0.9);
+  transition:all 0.3s ease;
+}
+.partner-item img:hover{
+  filter:brightness(1);
+  transform:scale(1.05);
+}
+.partner-item span{
+  display:block;
+  margin-top:8px;
+  font-size:0.75rem;
+  color:#4a5568;
+}
+footer{
+  background:rgba(0,0,0,0.02);
+  padding:60px 0 30px;
+  margin-top:60px;
+  border-top:1px solid var(--border-light);
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:40px;
+  margin-bottom:40px;
+}
+.footer-col h4{
+  color:var(--gold);
+  margin-bottom:20px;
+  font-size:1.1rem;
+}
+.footer-col a{
+  display:block;
+  color:#4a5568;
+  text-decoration:none;
+  margin-bottom:12px;
+  transition:.3s;
+  font-size:0.85rem;
+}
+.footer-col a:hover{
+  color:var(--gold);
+  padding-left:5px;
+}
+.footer-col p{
+  color:#4a5568;
+  font-size:0.85rem;
+  margin-bottom:10px;
+}
+.hours{
+  font-size:0.85rem;
+  color:#4a5568;
+}
+.hours p{
+  margin-bottom:6px;
+}
+.social-links{
+  display:flex;
+  gap:12px;
+  margin-top:15px;
+}
+.social-links a{
+  width:34px;
+  height:34px;
+  background:rgba(0,0,0,0.05);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-dark);
+  text-decoration:none;
+  transition:.3s;
+}
+.social-links a:hover{
+  background:var(--gold);
+  color:var(--white);
+  transform:translateY(-3px);
+}
+.copyright{
+  text-align:center;
+  padding-top:30px;
+  border-top:1px solid var(--border-light);
+  color:#4a5568;
+  font-size:0.8rem;
+}
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 0.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:55px;
+  height:55px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:white;
+  font-size:1.6rem;
+  z-index:999;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:all 0.3s ease;
+}
+.whatsapp:hover{
+  transform:scale(1.1);
+}
+#progress-bar{
+  position:fixed;
+  top:0;left:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  z-index:9999;
+  width:0%;
+  transition:width 0.1s linear;
+}
+@media(max-width:980px){
+  .page-hero h1{font-size:2.8rem;}
+  .about-story{grid-template-columns:1fr;}
+  .timeline-vertical{padding-left:20px;}
+  .timeline-vertical::before{left:10px;}
+  .timeline-node{padding-left:35px;}
+  .timeline-dot{width:40px;height:40px;left:-15px;}
+  .timeline-dot i{font-size:1rem;}
+  .credentials-grid{grid-template-columns:1fr;}
+  .bring-grid{grid-template-columns:1fr;}
+  .nav-links{
+    position:fixed;
+    top:90px;
+    left:-100%;
+    width:80%;
+    height:calc(100vh - 90px);
+    background:var(--white);
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top:40px;
+    transition:left 0.3s ease;
+    gap:25px;
+    z-index:998;
+    border-right:1px solid var(--border-light);
+  }
+  .nav-links.active{
+    left:0;
+  }
+  .menu-toggle{
+    display:block;
+  }
+  body{cursor:auto;}
+  .cursor-dot,.cursor-ring{display:none;}
+  .navbar{top:61px;}
+  .navbar.scrolled{top:0;}
+  .philosophy-section{padding:40px 25px;}
+}
+@media(max-width:600px){
+  .page-hero h1{font-size:2rem;}
+  .container{padding:0 20px;}
+  .top-bar .container{justify-content:center;}
+  .navbar{top:78px;}
+}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="spotlight" id="spotlight"></div>
+<canvas id="particles"></canvas>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-contact">
+      <a href="tel:+254702741067"><i class="fas fa-phone-alt"></i> +254 702 741 067</a>
+      <a href="mailto:consult@fredndonga.co.ke"><i class="fas fa-envelope"></i> consult@fredndonga.co.ke</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <div class="logo">
+      <img src="https://i.postimg.cc/V6Fx2f0R/logo-fred.png" alt="Fred Ndonga">
+      <div>
+        <h2>FRED NDONGA</h2>
+        <span>HOSPITALITY CONSULTANT</span>
+      </div>
+    </div>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero container">
+    <div class="reveal">
+      <h1>About Fred Ndonga</h1>
+      <p>From the floor to the boardroom — a career built on real hospitality experience.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="about-story reveal">
+      <div class="about-story-image">
+        <img src="https://i.postimg.cc/jjhW3fcH/certified.png" alt="Fred Ndonga">
+      </div>
+      <div class="about-story-content">
+        <h2>I started at the bottom. I know your world.</h2>
+        <p>Before I became a trainer or a consultant, I was on the floor — clearing plates, serving tables, handling angry guests at 6 AM. That experience taught me something no textbook could: great hospitality isn't about fancy policies. It's about consistency, pride, and systems that actually work.</p>
+        <p>Over the past decade, I worked my way through Sarova Hotels — from the front lines to training new teams. I earned my Trainer of Trainers certification from Kenya Utalii College and built a reputation for turning chaotic operations into smooth-running departments.</p>
+        <p>Today, I work with hotel owners, restaurant founders, and resort operators across Kenya. I don't hand you a report and disappear. I stand beside your team, fix what's broken, and teach your people to run better shifts — long after I'm gone.</p>
+        <div class="story-signature">— Fred Ndonga</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>My Journey</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline-vertical">
+      <div class="timeline-node reveal">
+        <div class="timeline-dot"><i class="fas fa-utensils"></i></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2013 - 2018</div>
+          <h3>The Front Line</h3>
+          <p>Serving tables, managing guest complaints, learning what actually works in real hospitality environments. This is where I built my foundation.</p>
+        </div>
+      </div>
+      <div class="timeline-node reveal">
+        <div class="timeline-dot"><i class="fas fa-hotel"></i></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2019 - 2023</div>
+          <h3>Sarova Hotels</h3>
+          <p>Worked across multiple properties including Sarova Lion Hill and Sarova Woodlands. Promoted through service excellence and started training new teams.</p>
+        </div>
+      </div>
+      <div class="timeline-node reveal">
+        <div class="timeline-dot"><i class="fas fa-chalkboard-user"></i></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2023 - Present</div>
+          <h3>Independent Consultant</h3>
+          <p>Now helping hospitality businesses across Kenya build systems, train teams, and grow sustainably. From one hotel to 85+ establishments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Credentials & Certifications</h2>
+      <div class="section-sub">Recognized by Kenya's leading hospitality institutions</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="credentials-grid">
+      <div class="cred-card reveal">
+        <img src="https://i.postimg.cc/ZqF9sQ4m/certified-trainer.png" alt="Trainer of Trainers">
+        <h3>Trainer of Trainers</h3>
+        <p>Certified by Sarova Woodlands Hotel & Spa — qualified to train hospitality staff at all levels.</p>
+      </div>
+      <div class="cred-card reveal">
+        <img src="https://i.postimg.cc/QC00jv0z/kenya-utalii-college-logo.jpg" alt="Kenya Utalii College">
+        <h3>Kenya Utalii College</h3>
+        <p>Advanced certifications in Food & Beverage Control, Banqueting & Events Supervision, and Hospitality Operations.</p>
+      </div>
+      <div class="cred-card reveal">
+        <img src="https://i.postimg.cc/jqZXn048/University-of-Eldoret250.png" alt="University of Eldoret">
+        <h3>University of Eldoret</h3>
+        <p>Bachelor of Science in Food Operations Management — academic foundation paired with practical experience.</p>
+      </div>
+      <div class="cred-card reveal">
+        <img src="https://i.postimg.cc/zXXkCnwH/certification.webp" alt="Professional Certifications">
+        <h3>Professional Certifications</h3>
+        <p>HACCP certified, Food safety management, and Service excellence standards.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="philosophy-section reveal">
+      <h2>My Philosophy</h2>
+      <div class="philosophy-quote">"Hospitality isn't about manuals. It's about people."</div>
+      <div class="philosophy-text">
+        <p>I believe great service comes from three things: clear systems, well-trained staff, and a culture of pride. I don't write binders that collect dust. I build workflows your team will actually use.</p>
+        <p style="margin-top:20px;">I coach your managers and train your trainers. When I leave, you run better than before I arrived. That's the only measure of success that matters to me.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>What I Bring to Your Business</h2>
+      <div class="section-sub">Practical value. Real results. No corporate fluff.</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="what-i-bring">
+      <div class="bring-grid">
+        <div class="bring-card reveal">
+          <div class="bring-icon"><i class="fas fa-chalkboard-user"></i></div>
+          <h3>Hands-On Training</h3>
+          <div class="bring-tagline">Theory is useless without execution.</div>
+          <p>I don't lecture. I stand beside your staff on the floor, show them what works, and drill it until it becomes habit.</p>
+          <ul class="bring-list">
+            <li><i class="fas fa-check-circle"></i> Service flow drills</li>
+            <li><i class="fas fa-check-circle"></i> Complaint handling roleplay</li>
+            <li><i class="fas fa-check-circle"></i> Real-time floor coaching</li>
+          </ul>
+        </div>
+        <div class="bring-card reveal">
+          <div class="bring-icon"><i class="fas fa-tasks"></i></div>
+          <h3>Operational Systems</h3>
+          <div class="bring-tagline">Chaos costs you money and reputation.</div>
+          <p>I audit your current operations and install simple, trackable systems that your team will actually follow.</p>
+          <ul class="bring-list">
+            <li><i class="fas fa-check-circle"></i> Daily checklists that work</li>
+            <li><i class="fas fa-check-circle"></i> Standard operating procedures</li>
+            <li><i class="fas fa-check-circle"></i> Quality control checkpoints</li>
+          </ul>
+        </div>
+        <div class="bring-card reveal">
+          <div class="bring-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Revenue Protection</h3>
+          <div class="bring-tagline">Happy guests come back. Unhappy ones tell everyone.</div>
+          <p>I help you reduce complaints, increase repeat bookings, and build a reputation that sells itself.</p>
+          <ul class="bring-list">
+            <li><i class="fas fa-check-circle"></i> Guest experience audit</li>
+            <li><i class="fas fa-check-circle"></i> Service recovery protocols</li>
+            <li><i class="fas fa-check-circle"></i> Repeat booking strategies</li>
+          </ul>
+        </div>
+        <div class="bring-card reveal">
+          <div class="bring-icon"><i class="fas fa-users"></i></div>
+          <h3>Leadership Development</h3>
+          <div class="bring-tagline">Your managers are your most valuable asset.</div>
+          <p>I coach your supervisors and department heads to lead confidently, handle pressure, and train their own teams.</p>
+          <ul class="bring-list">
+            <li><i class="fas fa-check-circle"></i> Shift management skills</li>
+            <li><i class="fas fa-check-circle"></i> Team motivation techniques</li>
+            <li><i class="fas fa-check-circle"></i> Trainer of Trainers certification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="partner-slider reveal">
+      <h3 style="color:var(--gold); font-size:1.6rem;">Trusted By & Trained At</h3>
+      <div class="partner-logos">
+        <div class="partner-item"><img src="https://i.postimg.cc/7ZQd3J1G/sarova.png" alt="Sarova Hotels"><span>Sarova Hotels</span></div>
+        <div class="partner-item"><img src="https://i.postimg.cc/QC00jv0z/kenya-utalii-college-logo.jpg" alt="Kenya Utalii College"><span>Kenya Utalii College</span></div>
+        <div class="partner-item"><img src="https://i.postimg.cc/jqZXn048/University-of-Eldoret250.png" alt="University of Eldoret"><span>University of Eldoret</span></div>
+        <div class="partner-item"><img src="https://i.postimg.cc/zGWKj9TZ/sarova-main.png" alt="Sarova Woodlands"><span>Sarova Woodlands & Lion Hill</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="trust-badge reveal">
+      <div class="trust-item"><i class="fas fa-handshake"></i><span>Worked with Sarova Hotels</span></div>
+      <div class="trust-item"><i class="fas fa-certificate"></i><span>Kenya Utalii College Certified</span></div>
+      <div class="trust-item"><i class="fas fa-chalkboard-user"></i><span>Trainer of Trainers</span></div>
+      <div class="trust-item"><i class="fas fa-globe"></i><span>Nationwide Coverage</span></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Fred Ndonga</h4><p>Hospitality Service & Operations Consultant</p><div class="social-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#contact">Contact</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="#">Consultation Guide</a><a href="#">Hospitality Blog</a><a href="#">Client Success Stories</a><a href="#">Training Programs</a></div>
+      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-phone"></i> +254 702 741 067</p><p><i class="fas fa-envelope"></i> consult@fredndonga.co.ke</p><p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p><div class="hours"><p><strong>Office Hours:</strong></p><p>Mon - Fri: 8am - 5pm</p><p>Saturday: 9am - 1pm</p><p>Sunday: Closed</p></div></div>
+    </div>
+    <div class="copyright"><p>© 2025 Fred Ndonga Hospitality Consultancy. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/254702741067" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+const progressBar = document.getElementById('progress-bar');
+if(progressBar){
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+}
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 80);
+});
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX; mouseY = e.clientY;
+  if(dot){ dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px'; }
+  const spotlight = document.getElementById('spotlight');
+  if(spotlight){ spotlight.style.left = mouseX + 'px'; spotlight.style.top = mouseY + 'px'; }
+});
+function animateRing() {
+  if(!ring) return;
+  ringX += (mouseX - ringX) * 0.12;
+  ringY += (mouseY - ringY) * 0.12;
+  ring.style.left = ringX + 'px';
+  ring.style.top = ringY + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a, button, .timeline-node, .cred-card, .bring-card, .trust-item').forEach(el => {
+  if(!ring) return;
+  el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+  el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+});
+const canvas = document.getElementById('particles');
+if(canvas){
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  class Particle {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2 + 0.5;
+      this.speedX = (Math.random() - 0.5) * 0.3;
+      this.speedY = (Math.random() - 0.5) * 0.3;
+      this.opacity = Math.random() * 0.3 + 0.1;
+      this.gold = Math.random() > 0.8;
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.gold ? `rgba(201,160,76,${this.opacity})` : `rgba(100,100,100,${this.opacity * 0.15})`;
+      ctx.fill();
+    }
+  }
+  for (let i = 0; i < 80; i++) particles.push(new Particle());
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => { p.update(); p.draw(); });
+    requestAnimationFrame(animateParticles);
+  }
+  animateParticles();
+}
+function reveal() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) el.classList.add('active');
+  });
+}
+window.addEventListener('scroll', reveal);
+reveal();
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+if(menuToggle && navLinks){
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const icon = menuToggle.querySelector('i');
+    if(icon){
+      if(navLinks.classList.contains('active')){
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    }
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      if(icon){
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  });
+}
+</script>
+</body>
+</html>
