@@ -2,38 +2,51 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Reduce Guest Complaints in 30 Days | Fred Ndonga</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>How to Reduce Guest Complaints in 30 Days | Prime Consulting Group</title>
+<meta name="description" content="Practical guide to reduce hotel guest complaints by 40% in 30 days. Proven systems from Prime Consulting Group's hospitality experts in Kenya.">
+<meta name="keywords" content="guest complaints, hotel operations, hospitality management, Prime Consulting Group">
+<meta name="author" content="Prime Consulting Group">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 :root{
   --gold:#c9a04c;
   --gold2:#dab866;
-  --card-bg-dark:#1a2744;
-  --body-bg:#f4f6fa;
-  --text-dark:#1a2744;
-  --text-light:#cbd5e1;
+  --gold-soft:rgba(201,160,76,0.12);
+  --navy:#0f1e3d;
+  --navy2:#1a2f5a;
+  --blue:#1a56db;
+  --body-bg:#f8f7f4;
   --white:#ffffff;
-  --border-light:rgba(0,0,0,0.08);
+  --text:#1a2744;
+  --muted:#64748b;
+  --light:#cbd5e1;
+  --border:rgba(0,0,0,0.07);
+  --shadow-sm:0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md:0 8px 30px rgba(0,0,0,0.10);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.13);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
-  font-family:'Inter',sans-serif;
+  font-family:'DM Sans',-apple-system,sans-serif;
   background:var(--body-bg);
-  color:var(--text-dark);
+  color:var(--text);
   line-height:1.6;
   opacity:0;
-  animation:fadeIn 0.6s ease forwards;
+  animation:fadeIn 0.4s ease forwards;
 }
-@keyframes fadeIn{
-  to{opacity:1;}
-}
-.container{max-width:900px;margin:0 auto;padding:0 20px;}
+@keyframes fadeIn{to{opacity:1;}}
+
+/* Container */
+.container{max-width:900px;margin:0 auto;padding:0 24px;}
+
+/* Article Header - Premium Navy */
 .article-header{
-  background:var(--card-bg-dark);
+  background:linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
   color:var(--white);
   padding:100px 0 60px;
   margin-bottom:50px;
@@ -43,54 +56,74 @@ body{
 .article-header::before{
   content:'';
   position:absolute;
-  top:-50%;
-  right:-20%;
-  width:60%;
-  height:200%;
-  background:radial-gradient(circle, rgba(201,160,76,0.08) 0%, transparent 70%);
-  animation:drift 20s ease infinite;
+  top:-30%;
+  right:-10%;
+  width:50%;
+  height:150%;
+  background:radial-gradient(circle, rgba(201,160,76,0.1) 0%, transparent 70%);
+  pointer-events:none;
 }
-@keyframes drift{
-  0%,100%{transform:translate(0,0) rotate(0deg);}
-  50%{transform:translate(-20px,20px) rotate(5deg);}
+.article-header::after{
+  content:'';
+  position:absolute;
+  bottom:-20%;
+  left:-10%;
+  width:40%;
+  height:100%;
+  background:radial-gradient(circle, rgba(201,160,76,0.06) 0%, transparent 70%);
+  pointer-events:none;
 }
 .article-header h1{
+  font-family:'Playfair Display',serif;
   font-size:3.2rem;
   margin-bottom:20px;
-  font-family:'Merriweather',serif;
-  font-weight:900;
+  font-weight:800;
   line-height:1.2;
-  animation:slideUp 0.6s ease 0.1s forwards;
+  letter-spacing:-1px;
+  animation:slideUp 0.5s ease 0.1s forwards;
   opacity:0;
   transform:translateY(30px);
+}
+.article-header h1 span{
+  background:linear-gradient(135deg, var(--gold), var(--gold2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 .article-meta{
   display:flex;
   gap:25px;
   margin:25px 0 15px;
-  font-size:0.9rem;
-  color:var(--text-light);
-  animation:slideUp 0.6s ease 0.2s forwards;
+  font-size:0.85rem;
+  color:rgba(255,255,255,0.6);
+  animation:slideUp 0.5s ease 0.2s forwards;
   opacity:0;
   transform:translateY(30px);
+  flex-wrap:wrap;
 }
-.article-meta i{color:var(--gold);margin-right:8px;}
+.article-meta i{color:var(--gold);margin-right:8px;width:16px;}
 .article-category{
   display:inline-block;
   background:rgba(201,160,76,0.15);
   color:var(--gold);
-  padding:6px 14px;
-  border-radius:30px;
-  font-size:0.75rem;
+  padding:6px 16px;
+  border-radius:100px;
+  font-size:0.7rem;
   font-weight:600;
+  letter-spacing:0.5px;
   margin-bottom:20px;
-  animation:slideUp 0.6s ease 0s forwards;
+  animation:slideUp 0.5s ease 0s forwards;
   opacity:0;
   transform:translateY(30px);
+  font-family:'Poppins',sans-serif;
+  border:1px solid rgba(201,160,76,0.3);
 }
+.article-category i{margin-right:6px;}
+
 @keyframes slideUp{
   to{opacity:1;transform:translateY(0);}
 }
+
+/* Back Link */
 .back-link{
   display:inline-flex;
   align-items:center;
@@ -99,59 +132,87 @@ body{
   color:var(--gold);
   text-decoration:none;
   font-weight:500;
-  transition:gap 0.3s ease;
+  transition:all 0.3s ease;
+  font-family:'Poppins',sans-serif;
+  font-size:0.85rem;
 }
-.back-link:hover{gap:12px;}
+.back-link:hover{gap:12px;color:var(--gold2);}
+
+/* Article Image */
 .article-image{
   width:100%;
-  height:450px;
+  height:420px;
   object-fit:cover;
   border-radius:24px;
   margin-bottom:40px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.1);
-  animation:fadeInUp 0.8s ease 0.2s forwards;
+  box-shadow:var(--shadow-lg);
+  animation:fadeInUp 0.6s ease 0.2s forwards;
   opacity:0;
   transform:translateY(20px);
+  border:1px solid rgba(201,160,76,0.15);
 }
 @keyframes fadeInUp{
   to{opacity:1;transform:translateY(0);}
 }
+
+/* Article Content Styling */
+.article-content{
+  background:var(--white);
+  border-radius:28px;
+  padding:48px;
+  margin-bottom:40px;
+  box-shadow:var(--shadow-sm);
+  border:1px solid var(--border);
+}
 .article-content h2{
+  font-family:'Playfair Display',serif;
   font-size:1.8rem;
   margin:50px 0 20px;
-  font-family:'Merriweather',serif;
   font-weight:700;
+  color:var(--navy);
+  letter-spacing:-0.5px;
 }
+.article-content h2:first-of-type{margin-top:0;}
 .article-content h3{
-  font-size:1.3rem;
+  font-size:1.2rem;
   margin:35px 0 15px;
   color:var(--gold);
-  font-weight:600;
+  font-weight:700;
+  font-family:'Poppins',sans-serif;
 }
 .article-content p{
   margin-bottom:25px;
-  color:#4a5568;
-  font-size:1.05rem;
+  color:var(--muted);
+  font-size:1.02rem;
   line-height:1.8;
 }
 .article-content ul, .article-content ol{
-  margin:25px 0 25px 30px;
-  color:#4a5568;
+  margin:25px 0 25px 28px;
+  color:var(--muted);
 }
 .article-content li{
   margin-bottom:12px;
   line-height:1.7;
 }
+.article-content li strong{
+  color:var(--navy);
+}
 .article-content .highlight{
-  background:linear-gradient(135deg, #e8edf5, #f0f3f8);
-  padding:30px;
+  background:linear-gradient(135deg, #f8f6f2, #fff);
+  padding:32px;
   border-left:5px solid var(--gold);
   margin:40px 0;
-  border-radius:16px;
-  transition:transform 0.3s ease;
+  border-radius:20px;
+  transition:all 0.3s ease;
+  box-shadow:var(--shadow-sm);
 }
 .article-content .highlight:hover{
-  transform:translateX(8px);
+  transform:translateX(6px);
+  box-shadow:var(--shadow-md);
+}
+.article-content .highlight strong{
+  color:var(--gold);
+  font-size:1.05rem;
 }
 .stat-number{
   font-size:2.5rem;
@@ -159,12 +220,13 @@ body{
   color:var(--gold);
   display:inline-block;
   margin-right:10px;
+  font-family:'Playfair Display',serif;
 }
 .progress-bar-container{
   background:#e2e8f0;
   border-radius:30px;
   height:12px;
-  margin:20px 0;
+  margin:25px 0;
   overflow:hidden;
 }
 .progress-bar{
@@ -177,147 +239,301 @@ body{
 @keyframes fillBar{
   to{width:var(--target);}
 }
-.article-footer{
-  margin-top:60px;
-  padding:40px 0;
-  border-top:2px solid var(--border-light);
-  text-align:center;
+
+/* Pull Quote */
+.pull-quote{
+  font-size:1.3rem;
+  font-style:italic;
+  color:var(--gold);
+  border-left:3px solid var(--gold);
+  padding-left:25px;
+  margin:40px 0;
+  font-family:'Playfair Display',serif;
+  line-height:1.5;
 }
-.btn{
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:var(--text-dark);
-  padding:14px 32px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-block;
-  transition:all 0.3s ease;
-}
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 25px rgba(201,160,76,0.3);
-}
+
+/* Author Section */
 .author-section{
   display:flex;
   align-items:center;
   gap:20px;
-  margin-top:40px;
-  padding:25px;
-  background:rgba(201,160,76,0.05);
-  border-radius:20px;
+  margin-bottom:40px;
+  padding:28px;
+  background:var(--gold-soft);
+  border-radius:24px;
+  border:1px solid rgba(201,160,76,0.2);
 }
 .author-avatar{
   width:70px;
   height:70px;
   border-radius:50%;
   object-fit:cover;
+  border:2px solid var(--gold);
 }
 .author-info h4{
   font-size:1.1rem;
   margin-bottom:5px;
+  color:var(--navy);
+  font-weight:700;
 }
 .author-info p{
   font-size:0.85rem;
-  color:#6b7280;
+  color:var(--muted);
   margin:0;
 }
+
+/* Article Footer / CTA */
+.article-footer{
+  margin-top:20px;
+  padding:40px 0 60px;
+  border-top:1px solid var(--border);
+  text-align:center;
+}
+.btn{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--navy);
+  padding:14px 36px;
+  border-radius:100px;
+  text-decoration:none;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:all 0.3s ease;
+  font-family:'Poppins',sans-serif;
+  font-size:0.9rem;
+  box-shadow:0 6px 20px rgba(201,160,76,0.25);
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(201,160,76,0.35);
+  gap:14px;
+}
+
+/* Share Section */
+.share-section{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  margin-top:30px;
+  padding-top:25px;
+  border-top:1px solid var(--border);
+}
+.share-section span{
+  color:var(--muted);
+  font-size:0.85rem;
+}
+.share-icons{
+  display:flex;
+  gap:12px;
+}
+.share-icons a{
+  width:38px;
+  height:38px;
+  background:#f1f5f9;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--muted);
+  font-size:1rem;
+  transition:all 0.3s ease;
+  text-decoration:none;
+}
+.share-icons a:hover{
+  background:var(--gold);
+  color:var(--white);
+  transform:translateY(-3px);
+}
+
+/* Related Articles */
+.related-section{
+  margin:60px 0 40px;
+}
+.related-section h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;
+  margin-bottom:25px;
+  color:var(--navy);
+}
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+.related-card{
+  background:var(--white);
+  border-radius:20px;
+  padding:20px;
+  border:1px solid var(--border);
+  transition:all 0.3s ease;
+  text-decoration:none;
+  display:block;
+}
+.related-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(201,160,76,0.3);
+  box-shadow:var(--shadow-md);
+}
+.related-card h4{
+  font-family:'Poppins',sans-serif;
+  font-size:0.9rem;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+.related-card p{
+  font-size:0.85rem;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* Responsive */
 @media(max-width:768px){
   .article-header h1{font-size:2rem;}
-  .article-image{height:250px;}
+  .article-header{padding:80px 0 40px;}
+  .article-image{height:220px;}
+  .article-content{padding:28px;}
   .article-content h2{font-size:1.5rem;}
   .container{padding:0 16px;}
+  .related-grid{grid-template-columns:1fr;}
+  .author-section{flex-direction:column;text-align:center;}
+  .share-section{flex-direction:column;}
 }
 </style>
 </head>
 <body>
 <div class="article-header">
   <div class="container">
-    <a href="../blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Insights</a>
-    <span class="article-category"><i class="fas fa-chart-line"></i> Operations</span>
-    <h1>How to Reduce Guest Complaints in 30 Days</h1>
+    <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Insights</a>
+    <div class="article-category"><i class="fas fa-chart-line"></i> Operations</div>
+    <h1>How to Reduce Guest Complaints <span>in 30 Days</span></h1>
     <div class="article-meta">
-      <span><i class="far fa-calendar-alt"></i> May 15, 2025</span>
+      <span><i class="far fa-calendar-alt"></i> June 1, 2026</span>
       <span><i class="far fa-clock"></i> 8 min read</span>
       <span><i class="fas fa-eye"></i> 2.3k views</span>
     </div>
   </div>
 </div>
+
 <div class="container">
   <img class="article-image" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop" alt="Hotel front desk guest complaint">
-  
+
   <div class="article-content">
     <p>Guest complaints are inevitable in hospitality. But <span class="stat-number">40%</span> of them can be eliminated within 30 days — without spending a dime on renovations or new equipment.</p>
-    
+
     <div class="progress-bar-container">
       <div class="progress-bar" style="--target:40%"></div>
     </div>
-    
-    <p>After consulting over 85 establishments across Kenya, I've seen the same patterns. Here's exactly what works.</p>
-    
+
+    <p>After consulting over 85 establishments across Kenya, we've seen the same patterns. Here's exactly what works — a system we've refined through years of hands-on experience at Sarova Hotels and across the industry.</p>
+
+    <div class="pull-quote">
+      "80% of complaints come from just 20% of your issues. Find those, fix them, and watch your reviews transform."
+    </div>
+
     <h2>📋 Week 1: Identify Your Real Problems</h2>
     <p>Most owners guess why guests complain. Stop guessing. Start tracking.</p>
     <ul>
       <li><strong>Log every complaint</strong> for 7 days — time, department, issue, resolution</li>
       <li><strong>Categorize them</strong> (service speed, room cleanliness, food quality, staff attitude)</li>
-      <li><strong>Find the top 3</strong> — 80% of complaints come from 20% of issues</li>
+      <li><strong>Find the top 3</strong> — 80% of complaints come from 20% of issues (Pareto Principle)</li>
     </ul>
-    
+
     <div class="highlight">
-      <strong>📌 Real example:</strong> One hotel thought their problem was "rude staff." After tracking, they discovered it was actually "slow check-in." Fixed that, complaints dropped 35%.
+      <strong>📌 Real example from our work:</strong> One hotel thought their problem was "rude staff." After tracking, we discovered it was actually "slow check-in." Fixed that, complaints dropped 35% within two weeks.
     </div>
-    
+
     <h2>🔧 Week 2: Fix the Root Causes</h2>
     <h3>For service speed complaints:</h3>
     <ul>
       <li>Map your service flow from arrival to departure</li>
       <li>Identify bottlenecks (where do guests wait the longest?)</li>
       <li>Implement a simple triage system for busy periods</li>
+      <li>Cross-train staff to handle multiple roles during peak hours</li>
     </ul>
     <h3>For cleanliness complaints:</h3>
     <ul>
       <li>Create a 15-minute pre-check checklist for housekeeping</li>
       <li>Implement supervisor spot-checks before room release</li>
       <li>Train staff to report issues immediately, not hide them</li>
+      <li>Install a simple digital log for maintenance requests</li>
     </ul>
-    
+
     <h2>🎓 Week 3: Train Your Team on Recovery</h2>
-    <p>You can't prevent every complaint. But you can handle them better.</p>
+    <p>You can't prevent every complaint. But you can handle them better. Our proven 4-step protocol:</p>
     <ul>
-      <li><strong>The 4-step apology:</strong> Listen → Acknowledge → Apologize → Act</li>
-      <li><strong>Empower front-line staff</strong> to offer small compensations (free coffee, discount)</li>
-      <li><strong>Role-play scenarios</strong> — your team should practice handling angry guests</li>
+      <li><strong>Step 1: Listen</strong> — Let them finish. Don't interrupt. Show you care.</li>
+      <li><strong>Step 2: Acknowledge</strong> — "I understand why you're frustrated."</li>
+      <li><strong>Step 3: Apologize</strong> — Sincere, specific, no excuses.</li>
+      <li><strong>Step 4: Act</strong> — Fix it fast. Empower front-line staff to offer small compensations (free coffee, 10% discount, late checkout).</li>
     </ul>
-    
+    <p><strong>Pro tip:</strong> Role-play scenarios weekly. Your team should practice handling angry guests until it becomes second nature.</p>
+
     <h2>🔄 Week 4: Create a Feedback Loop</h2>
     <ul>
-      <li><strong>Guest follow-up:</strong> Call every complaining guest within 24 hours</li>
-      <li><strong>Weekly review meetings:</strong> 15 minutes. What went wrong? What got fixed?</li>
-      <li><strong>Celebrate improvements:</strong> When a complaint category drops, acknowledge the team</li>
+      <li><strong>Guest follow-up:</strong> Call every complaining guest within 24 hours. Most won't expect it. That's your advantage.</li>
+      <li><strong>Weekly review meetings:</strong> 15 minutes max. What went wrong? What got fixed? What's still broken?</li>
+      <li><strong>Celebrate improvements:</strong> When a complaint category drops, acknowledge the team publicly. Recognition drives results.</li>
+      <li><strong>Track your numbers:</strong> Use a simple dashboard. What gets measured gets managed.</li>
     </ul>
-    
+
     <h2>📈 The Results You Can Expect</h2>
-    <p>In my experience, establishments that follow this system see:</p>
+    <p>Across the 85+ establishments we've consulted, those who follow this system consistently see:</p>
     <ul>
       <li><strong>40% reduction</strong> in total complaints within 30 days</li>
       <li><strong>Higher guest satisfaction scores</strong> within 60 days</li>
       <li><strong>Improved staff confidence</strong> in handling difficult situations</li>
+      <li><strong>Better online reviews</strong> — repeat guests mention "how issues were handled"</li>
     </ul>
-    
+
     <div class="highlight">
-      <strong>🎯 Your next step:</strong> Start logging complaints tomorrow morning. You can't fix what you don't measure.
+      <strong>🎯 Your next step:</strong> Start logging complaints tomorrow morning. You can't fix what you don't measure. Need help implementing this system? We're here to help.
     </div>
   </div>
-  
+
+  <!-- Author Section -->
   <div class="author-section">
-    <img class="author-avatar" src="https://i.postimg.cc/V6Fx2f0R/logo-fred.png" alt="Fred Ndonga">
+    <img class="author-avatar" src="https://res.cloudinary.com/dvqjgbdhp/image/upload/v1780431597/ChatGPT_Image_Jun_2_2026_11_17_46_PM_k1gh3t.png" alt="Prime Consulting Group">
     <div class="author-info">
-      <h4>Written by Fred Ndonga</h4>
-      <p>Hospitality Consultant | Trainer of Trainers | 10+ years experience</p>
+      <h4>Prime Consulting Group</h4>
+      <p>Hospitality Consultants | Kenya's Premier Service Excellence Experts | 10+ Years Experience</p>
     </div>
   </div>
-  
+
+  <!-- Share Section -->
+  <div class="share-section">
+    <span><i class="fas fa-share-alt"></i> Share this article:</span>
+    <div class="share-icons">
+      <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'_blank');return false;"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href),'_blank');return false;"><i class="fab fa-twitter"></i></a>
+      <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href),'_blank');return false;"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+location.href),'_blank');return false;"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Related Articles -->
+  <div class="related-section">
+    <h3>You Might Also Like</h3>
+    <div class="related-grid">
+      <a href="#" class="related-card">
+        <h4><i class="fas fa-users"></i> Staff Training</h4>
+        <p>Training Your Restaurant Staff: A Practical Guide</p>
+      </a>
+      <a href="#" class="related-card">
+        <h4><i class="fas fa-hotel"></i> Startups</h4>
+        <p>Opening a Hotel? 10 Things We Wish We Knew</p>
+      </a>
+      <a href="#" class="related-card">
+        <h4><i class="fas fa-chart-simple"></i> Revenue</h4>
+        <p>5 Revenue Leaks in Your Hotel (And How to Fix Them)</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
   <div class="article-footer">
-    <a href="../../contact.html" class="btn">📞 Need Help Implementing This? →</a>
+    <a href="index.html#contact" class="btn"><i class="fas fa-calendar-check"></i> Need Help Implementing This? Book a Call →</a>
   </div>
 </div>
 </body>
