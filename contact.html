@@ -3,399 +3,344 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Fred Ndonga | Contact</title>
+<title>Prime Consulting Group | Contact Us</title>
+<meta name="description" content="Get in touch with Prime Consulting Group - Kenya's premier hospitality consultants. Book a free discovery call or send us a message. We respond within 24 hours.">
+<meta name="keywords" content="contact hospitality consultant Kenya, book consultation, hospitality consulting, Prime Consulting Group">
+<meta name="author" content="Prime Consulting Group">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
+/* ── TOKENS ─────────────────────────────────────── */
 :root{
   --gold:#c9a04c;
   --gold2:#dab866;
-  --card-bg-dark:#1a2744;
-  --card-bg-dark-light:#23305c;
-  --body-bg:#f4f6fa;
-  --text-dark:#1a2744;
-  --text-light:#cbd5e1;
+  --gold-soft:rgba(201,160,76,0.12);
+  --navy:#0f1e3d;
+  --navy2:#1a2f5a;
+  --blue:#1a56db;
+  --body-bg:#f8f7f4;
   --white:#ffffff;
-  --border-light:rgba(0,0,0,0.08);
-  --border-dark:rgba(255,255,255,0.08);
+  --text:#1a2744;
+  --muted:#64748b;
+  --light:#cbd5e1;
+  --border:rgba(0,0,0,0.07);
+  --radius:20px;
+  --shadow-sm:0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md:0 8px 30px rgba(0,0,0,0.10);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.13);
+  --shadow-gold:0 12px 40px rgba(201,160,76,0.22);
 }
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-html{
-  scroll-behavior:smooth;
-}
+
+/* ── RESET ──────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-family:'DM Sans',-apple-system,sans-serif;
   background:var(--body-bg);
-  color:var(--text-dark);
+  color:var(--text);
   overflow-x:hidden;
-  cursor:none;
 }
-h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-header h2{
-  font-family:'Poppins','Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+h1,h2,h3,h4{font-family:'Playfair Display',serif;}
+.nav-links a,.btn,.hero-badge,.section-header h2,.btn-outline,.logo-name,.logo-tagline{
+  font-family:'Poppins',sans-serif;
 }
-.cursor-dot{
-  width:8px;
-  height:8px;
-  background:var(--gold);
-  border-radius:50%;
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px;}
+
+/* ── NOISE TEXTURE OVERLAY ──────────────────────── */
+body::before{
+  content:'';
   position:fixed;
-  top:0;left:0;
-  transform:translate(-50%,-50%);
-  transition:transform 0.1s ease;
-  pointer-events:none;
-  z-index:99999;
-}
-.cursor-ring{
-  width:36px;
-  height:36px;
-  border:1.5px solid rgba(201,160,76,0.6);
-  border-radius:50%;
-  position:fixed;
-  top:0;left:0;
-  transform:translate(-50%,-50%);
-  pointer-events:none;
-  z-index:99998;
-  transition:width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
-}
-.cursor-ring.hovered{
-  width:60px;
-  height:60px;
-  border-color:var(--gold);
-  background:rgba(201,160,76,0.05);
-}
-#particles{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events:none;
   z-index:0;
-  opacity:0.12;
+  opacity:0.4;
 }
-.spotlight{
-  position:fixed;
-  width:500px;
-  height:500px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(201,160,76,0.06) 0%, transparent 70%);
-  pointer-events:none;
-  transform:translate(-50%,-50%);
-  z-index:1;
-  transition:left 0.2s ease, top 0.2s ease;
+
+/* ── PROGRESS BAR ───────────────────────────────── */
+#progress-bar{
+  position:fixed;top:0;left:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2),var(--blue));
+  z-index:9999;width:0%;
+  transition:width 0.1s linear;
+  box-shadow:0 0 10px var(--gold);
 }
-::-webkit-scrollbar{
-  width:6px;
-}
-::-webkit-scrollbar-thumb{
-  background:var(--gold);
-  border-radius:10px;
-}
+
+/* ── CONTAINER ──────────────────────────────────── */
 .container{
-  width:100%;
-  max-width:1280px;
-  margin:auto;
-  padding:0 30px;
+  width:100%;max-width:1280px;
+  margin:auto;padding:0 32px;
+  position:relative;z-index:2;
+}
+
+/* ── TOP CONTACT BAR ────────────────────────────── */
+.top-contact-bar{
+  background:var(--navy);
+  padding:9px 0;
   position:relative;
-  z-index:2;
+  z-index:1000;
 }
-.top-bar{
-  background:var(--white);
-  border-bottom:1px solid var(--border-light);
-  padding:10px 0;
-  position:relative;
-  z-index:1001;
+.top-contact-bar .container{
+  display:flex;justify-content:flex-end;gap:28px;flex-wrap:wrap;
 }
-.top-bar .container{
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:25px;
+.top-contact-bar a{
+  color:rgba(255,255,255,0.75);
+  text-decoration:none;font-size:0.78rem;
+  display:inline-flex;align-items:center;gap:7px;
+  transition:color 0.25s;
+  font-family:'DM Sans',sans-serif;
 }
-.top-contact{
-  display:flex;
-  gap:25px;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.top-contact a{
-  color:#4a5568;
-  text-decoration:none;
-  font-size:0.85rem;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  transition:color 0.3s ease;
-}
-.top-contact a i{
-  color:var(--gold);
-  font-size:0.9rem;
-}
-.top-contact a:hover{
-  color:var(--gold);
-}
+.top-contact-bar a i{color:var(--gold);font-size:0.8rem;}
+.top-contact-bar a:hover{color:#fff;}
+
+/* ── NAVBAR ─────────────────────────────────────── */
 .navbar{
-  position:fixed;
-  width:100%;
-  top:41px;
-  z-index:999;
-  backdrop-filter:blur(16px);
-  background:rgba(255,255,255,0.95);
-  border-bottom:1px solid var(--border-light);
-  transition:all 0.3s ease;
+  position:sticky;
+  top:0;
+  z-index:998;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow 0.3s,background 0.3s;
 }
 .navbar.scrolled{
-  top:0;
-  background:rgba(255,255,255,0.98);
-  box-shadow:0 4px 30px rgba(0,0,0,0.08);
+  box-shadow:0 4px 24px rgba(0,0,0,0.08);
+  background:rgba(255,255,255,0.99);
 }
 .nav-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 0;
+  padding:10px 0;
+  gap:20px;
 }
-.logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .logo img{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  object-fit:cover;
-  background:var(--card-bg-dark);
-  padding:3px;
-  border:1px solid var(--gold);
-  transition:transform 0.3s ease;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  height:90px;width:auto;object-fit:contain;
+  transition:transform 0.3s;
 }
-.logo img:hover{
-  transform:scale(1.05);
+.logo:hover img{transform:scale(1.03);}
+.logo-text{display:flex;flex-direction:column;line-height:1.2;}
+.logo-name{
+  font-size:1.25rem;font-weight:800;
+  color:var(--blue);letter-spacing:-0.3px;
 }
-.logo h2{
-  font-size:1.3rem;
-  font-weight:700;
-  letter-spacing:-0.5px;
-  color:var(--text-dark);
+.logo-tagline{
+  font-size:0.64rem;font-weight:500;
+  color:var(--gold);letter-spacing:1.8px;
+  text-transform:uppercase;
 }
-.logo span{
-  font-size:.75rem;
-  color:var(--gold);
-  letter-spacing:1px;
-  font-weight:500;
-}
-.nav-links{
-  display:flex;
-  gap:30px;
-  align-items:center;
-}
+.nav-links{display:flex;gap:28px;align-items:center;}
 .nav-links a{
-  color:var(--text-dark);
-  text-decoration:none;
-  font-weight:500;
-  transition:.3s;
-  font-size:0.95rem;
-  letter-spacing:0.3px;
-  position:relative;
+  color:var(--text);text-decoration:none;
+  font-weight:500;font-size:0.88rem;
+  letter-spacing:0.2px;position:relative;
+  transition:color 0.25s;
 }
 .nav-links a::after{
-  content:'';
-  position:absolute;
-  bottom:-5px;
-  left:0;
-  width:0;
-  height:2px;
-  background:var(--gold);
-  transition:width 0.3s ease;
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  border-radius:2px;transition:width 0.3s ease;
 }
-.nav-links a:hover::after{
-  width:100%;
-}
-.nav-links a:hover{
-  color:var(--gold);
-}
-.menu-toggle{
-  display:none;
-  font-size:1.5rem;
-  color:var(--text-dark);
-  cursor:pointer;
-  z-index:1000;
-}
-.btn{
+.nav-links a:hover::after{width:100%;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{
   background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:var(--text-dark);
-  padding:12px 28px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:600;
-  transition:all .3s ease;
-  display:inline-block;
-  border:none;
-  cursor:none;
-  letter-spacing:0.5px;
-  position:relative;
-  overflow:hidden;
-  font-size:0.9rem;
-  font-family:'Poppins','Montserrat',sans-serif;
+  color:var(--navy)!important;
+  padding:9px 22px;border-radius:100px;
+  font-weight:700!important;font-size:0.82rem!important;
+  transition:all 0.3s!important;
+  box-shadow:0 4px 16px rgba(201,160,76,0.3);
 }
-.btn::after{
-  content:'';
-  position:absolute;
-  top:50%;left:50%;
-  width:0;height:0;
-  background:rgba(255,255,255,0.3);
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-  transition:width 0.5s ease, height 0.5s ease;
+.nav-cta:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 8px 24px rgba(201,160,76,0.4)!important;
 }
-.btn:active::after{
-  width:300px;height:300px;
+.nav-cta::after{display:none!important;}
+.menu-toggle{
+  display:none;font-size:1.4rem;
+  color:var(--text);cursor:pointer;
+  width:40px;height:40px;
+  background:#f1f5f9;border-radius:10px;
+  align-items:center;justify-content:center;
+  transition:background 0.2s;
 }
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 35px rgba(201,160,76,0.35), 0 0 0 1px rgba(201,160,76,0.3);
-}
-.btn-outline{
-  border:1.5px solid rgba(201,160,76,0.5);
-  padding:12px 28px;
-  border-radius:40px;
-  color:var(--text-dark);
-  text-decoration:none;
-  transition:.3s;
-  background:transparent;
-  font-weight:500;
-  position:relative;
-  overflow:hidden;
-  font-size:0.9rem;
-  font-family:'Poppins','Montserrat',sans-serif;
-}
-.btn-outline::before{
-  content:'';
-  position:absolute;
-  top:0;left:-100%;
-  width:100%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(201,160,76,0.1),transparent);
-  transition:left 0.5s ease;
-}
-.btn-outline:hover::before{
-  left:100%;
-}
-.btn-outline:hover{
-  background:rgba(201,160,76,0.1);
-  border-color:var(--gold);
-  transform:translateY(-3px);
-}
+.menu-toggle:hover{background:var(--gold-soft);}
+
+/* ── PAGE HERO ──────────────────────────────────── */
 .page-hero{
   min-height:40vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding-top:160px;
-  padding-bottom:60px;
+  padding:120px 0 60px;
+  background:linear-gradient(135deg, rgba(15,30,61,0.04) 0%, rgba(201,160,76,0.06) 100%);
 }
 .page-hero h1{
-  font-size:4rem;
-  margin-bottom:20px;
-  background:linear-gradient(135deg,var(--text-dark) 30%,#c9a04c 80%);
+  font-family:'Playfair Display',serif;
+  font-size:3.5rem;
+  margin-bottom:18px;
+  color:var(--navy);
+  font-weight:800;
+  letter-spacing:-1px;
+}
+.page-hero h1 span{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 .page-hero p{
-  color:#4a5568;
-  font-size:1.2rem;
-  max-width:700px;
+  color:var(--muted);
+  font-size:1.1rem;
+  max-width:650px;
   margin:0 auto;
+  line-height:1.7;
 }
-.section-header{
-  text-align:center;
-  margin-bottom:40px;
-}
+
+/* ── SECTION COMMONS ─────────────────────────────── */
+.section-header{text-align:center;margin-bottom:40px;}
 .section-header h2{
-  font-size:2rem;
-  margin-bottom:10px;
-  color:var(--text-dark);
-  font-weight:700;
+  font-family:'Playfair Display',serif;
+  font-size:2rem;margin-bottom:10px;
+  color:var(--navy);font-weight:700;
 }
 .section-divider{
-  width:60px;
-  height:3px;
+  width:48px;height:3px;
   background:linear-gradient(90deg,var(--gold),var(--gold2));
-  border-radius:2px;
-  margin:15px auto 0;
+  border-radius:2px;margin:15px auto 0;
 }
+.section-label{
+  display:inline-block;
+  font-family:'Poppins',sans-serif;
+  font-size:0.7rem;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+  padding:5px 14px;border-radius:100px;
+  background:var(--gold-soft);
+  border:1px solid rgba(201,160,76,0.2);
+}
+
+/* ── TRUST STATS ─────────────────────────────────── */
+.trust-stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  margin:40px 0 60px;
+  background:var(--white);
+  border-radius:24px;
+  border:1px solid var(--border);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+}
+.trust-stat{
+  text-align:center;
+  padding:32px 20px;
+  border-right:1px solid var(--border);
+  transition:all 0.3s;
+}
+.trust-stat:last-child{border-right:none;}
+.trust-stat:hover{
+  background:#fafaf8;
+  transform:translateY(-4px);
+}
+.trust-stat .number{
+  font-family:'Playfair Display',serif;
+  font-size:2.5rem;
+  font-weight:800;
+  color:var(--gold);
+  letter-spacing:-1px;
+}
+.trust-stat .label{
+  font-size:0.8rem;
+  color:var(--muted);
+  margin-top:8px;
+  font-weight:500;
+}
+
+/* ── CONTACT GRID ────────────────────────────────── */
 .contact-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
+  grid-template-columns:1fr 1.3fr;
+  gap:50px;
   margin:60px 0 80px;
 }
 .contact-info{
-  background:var(--white);
-  border-radius:28px;
-  padding:40px;
-  border:1px solid var(--border-light);
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
-}
-.info-item{
   display:flex;
-  align-items:flex-start;
-  gap:18px;
-  margin-bottom:30px;
+  flex-direction:column;
+  gap:20px;
 }
-.info-item:last-child{
-  margin-bottom:0;
+.contact-info-header h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+.contact-info-header p{
+  color:var(--muted);
+  font-size:0.88rem;
+  line-height:1.7;
+}
+.info-card{
+  background:var(--white);
+  border-radius:18px;
+  padding:20px 24px;
+  border:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  gap:18px;
+  transition:all 0.3s;
+  box-shadow:var(--shadow-sm);
+}
+.info-card:hover{
+  border-color:rgba(201,160,76,0.3);
+  transform:translateX(6px);
+  box-shadow:var(--shadow-md);
 }
 .info-icon{
   width:50px;
   height:50px;
-  background:rgba(201,160,76,0.1);
-  border-radius:50%;
+  border-radius:16px;
+  background:var(--gold-soft);
+  border:1px solid rgba(201,160,76,0.2);
   display:flex;
   align-items:center;
   justify-content:center;
   flex-shrink:0;
 }
 .info-icon i{
-  font-size:1.4rem;
+  font-size:1.2rem;
   color:var(--gold);
 }
-.info-details h3{
-  font-size:1.1rem;
-  margin-bottom:5px;
-  color:var(--text-dark);
+.info-card h3{
+  font-family:'Poppins',sans-serif;
+  font-size:0.85rem;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:4px;
 }
-.info-details p, .info-details a{
-  color:#4a5568;
+.info-card a,.info-card p{
+  color:var(--muted);
   text-decoration:none;
   font-size:0.9rem;
-  line-height:1.5;
-  transition:color 0.3s ease;
+  transition:color 0.2s;
 }
-.info-details a:hover{
+.info-card a:hover{
   color:var(--gold);
 }
-.hours-list{
-  margin-top:10px;
-}
-.hours-list p{
-  font-size:0.85rem;
-  margin-bottom:5px;
-  color:#4a5568;
-}
 .response-badge{
-  background:rgba(201,160,76,0.1);
+  background:var(--gold-soft);
   border-radius:16px;
-  padding:15px;
-  margin:25px 0;
+  padding:16px;
+  margin:10px 0;
   text-align:center;
+  border:1px solid rgba(201,160,76,0.2);
 }
 .response-badge i{
   color:var(--gold);
@@ -403,110 +348,112 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
 }
 .response-badge span{
   font-size:0.85rem;
-  color:var(--text-dark);
+  color:var(--text);
+  font-weight:500;
 }
 .social-connect{
-  margin-top:30px;
+  margin-top:20px;
   padding-top:20px;
-  border-top:1px solid var(--border-light);
+  border-top:1px solid var(--border);
 }
 .social-connect h4{
   color:var(--gold);
   margin-bottom:15px;
-  font-size:1rem;
+  font-size:0.9rem;
+  font-family:'Poppins',sans-serif;
 }
 .social-icons{
   display:flex;
-  gap:15px;
+  gap:12px;
 }
 .social-icons a{
-  width:40px;
-  height:40px;
-  background:rgba(0,0,0,0.05);
-  border-radius:50%;
+  width:38px;
+  height:38px;
+  background:#f1f5f9;
+  border-radius:12px;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:var(--text-dark);
-  font-size:1.2rem;
+  color:var(--muted);
+  font-size:1rem;
   transition:all 0.3s ease;
+  text-decoration:none;
 }
 .social-icons a:hover{
   background:var(--gold);
   color:var(--white);
   transform:translateY(-3px);
 }
+
+/* ── CONTACT FORM ────────────────────────────────── */
 .contact-form-wrapper{
-  background:var(--card-bg-dark);
+  background:var(--navy);
   border-radius:28px;
   padding:40px;
-  border:1px solid var(--border-dark);
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:var(--shadow-lg);
 }
 .contact-form-wrapper h3{
-  color:var(--white);
-  margin-bottom:10px;
-  font-size:1.3rem;
+  font-family:'Playfair Display',serif;
+  color:#fff;
+  margin-bottom:8px;
+  font-size:1.5rem;
 }
-.form-group{
-  margin-bottom:20px;
+.contact-form-wrapper>p{
+  color:var(--light);
+  font-size:0.84rem;
+  margin-bottom:28px;
 }
+.form-group{margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .form-group label{
   display:block;
   margin-bottom:8px;
-  font-size:0.85rem;
+  font-size:0.78rem;
+  color:rgba(255,255,255,0.55);
+  font-family:'Poppins',sans-serif;
   font-weight:500;
-  color:var(--text-light);
+  letter-spacing:0.3px;
 }
 .form-group input,
 .form-group select,
 .form-group textarea{
   width:100%;
-  padding:14px 16px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid var(--border-dark);
-  border-radius:16px;
-  color:var(--white);
-  font-size:0.9rem;
-  transition:all 0.3s ease;
+  padding:13px 16px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:14px;
+  color:#fff;
+  font-size:0.88rem;
+  font-family:'DM Sans',sans-serif;
+  transition:border-color 0.25s,background 0.25s;
+  outline:none;
 }
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus{
-  outline:none;
   border-color:var(--gold);
   background:rgba(255,255,255,0.12);
-  box-shadow:0 0 0 3px rgba(201,160,76,0.2);
 }
 .form-group input::placeholder,
-.form-group select::placeholder,
-.form-group textarea::placeholder{
-  color:rgba(255,255,255,0.4);
-}
-.form-group textarea{
-  resize:vertical;
-  min-height:100px;
-}
+.form-group textarea::placeholder{color:rgba(255,255,255,0.3);}
+.form-group select option{background:var(--navy2);color:#fff;}
+.form-group textarea{resize:vertical;min-height:110px;}
+
 .checkbox-group{
   margin:20px 0;
 }
 .checkbox-group > label{
   display:block;
   margin-bottom:12px;
-  color:var(--text-light);
-  font-size:0.85rem;
-}
-.checkbox-group input{
-  width:18px;
-  height:18px;
-  margin:0;
-  accent-color:var(--gold);
+  color:rgba(255,255,255,0.6);
+  font-size:0.8rem;
+  font-family:'Poppins',sans-serif;
 }
 .interests-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:12px;
-  margin-top:10px;
 }
 .interest-checkbox{
   display:flex;
@@ -516,118 +463,104 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
 .interest-checkbox input{
   width:16px;
   height:16px;
+  accent-color:var(--gold);
+  cursor:pointer;
 }
 .interest-checkbox label{
-  font-size:0.85rem;
+  font-size:0.8rem;
   margin:0;
   font-weight:normal;
-  color:var(--text-light);
+  color:rgba(255,255,255,0.65);
+  cursor:pointer;
 }
 .form-buttons{
   display:flex;
   gap:15px;
   flex-wrap:wrap;
-  margin-top:25px;
+  margin-top:28px;
 }
 .submit-btn{
   background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:var(--text-dark);
+  color:var(--navy);
   padding:14px 32px;
-  border-radius:40px;
+  border-radius:100px;
   border:none;
-  font-weight:600;
-  font-size:0.9rem;
-  cursor:none;
+  font-weight:700;
+  font-size:0.85rem;
+  cursor:pointer;
   transition:all 0.3s ease;
+  font-family:'Poppins',sans-serif;
 }
 .submit-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 10px 20px rgba(201,160,76,0.3);
+  box-shadow:0 10px 20px rgba(201,160,76,0.35);
 }
 .whatsapp-submit{
   background:#25D366;
   color:white;
   padding:14px 32px;
-  border-radius:40px;
+  border-radius:100px;
   border:none;
-  font-weight:600;
-  font-size:0.9rem;
-  cursor:none;
+  font-weight:700;
+  font-size:0.85rem;
+  cursor:pointer;
   transition:all 0.3s ease;
   display:inline-flex;
   align-items:center;
   gap:8px;
+  font-family:'Poppins',sans-serif;
 }
 .whatsapp-submit:hover{
   transform:translateY(-2px);
   box-shadow:0 10px 20px rgba(37,211,102,0.3);
 }
+
+/* ── FAQ SECTION ─────────────────────────────────── */
 .faq-section{
-  margin:80px 0;
+  margin:60px 0 40px;
 }
 .faq-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
   gap:25px;
   margin-top:40px;
 }
 .faq-item{
   background:var(--white);
   border-radius:20px;
-  padding:25px;
-  border:1px solid var(--border-light);
+  padding:28px;
+  border:1px solid var(--border);
   transition:all 0.3s ease;
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+  box-shadow:var(--shadow-sm);
 }
 .faq-item:hover{
-  transform:translateY(-3px);
-  background:var(--white);
+  transform:translateY(-4px);
   border-color:rgba(201,160,76,0.3);
-  box-shadow:0 12px 24px rgba(0,0,0,0.08);
+  box-shadow:var(--shadow-md);
 }
 .faq-question{
-  font-size:1.1rem;
-  font-weight:600;
+  font-size:1rem;
+  font-weight:700;
   color:var(--gold);
   margin-bottom:12px;
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
+  font-family:'Poppins',sans-serif;
 }
 .faq-question i{
   font-size:1rem;
-}
-.faq-answer{
-  color:#4a5568;
-  font-size:0.9rem;
-  line-height:1.6;
-}
-.trust-stats{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  margin:60px 0 40px;
-  padding:30px;
-  background:var(--white);
-  border-radius:30px;
-  border:1px solid var(--border-light);
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
-}
-.trust-stat{
-  text-align:center;
-}
-.trust-stat .number{
-  font-size:2rem;
-  font-weight:700;
   color:var(--gold);
 }
-.trust-stat .label{
-  font-size:0.85rem;
-  color:#4a5568;
+.faq-answer{
+  color:var(--muted);
+  font-size:0.88rem;
+  line-height:1.7;
 }
+
+/* ── CTA SECTION ─────────────────────────────────── */
 .cta-section{
-  background:linear-gradient(135deg, rgba(201,160,76,0.1), rgba(255,255,255,0.95));
+  background:linear-gradient(135deg, rgba(201,160,76,0.08) 0%, rgba(255,255,255,0.95) 100%);
   border-radius:40px;
   padding:50px;
   margin:40px 0 80px;
@@ -637,11 +570,13 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
 .cta-section h2{
   font-size:1.8rem;
   margin-bottom:15px;
-  color:var(--text-dark);
+  color:var(--navy);
+  font-family:'Playfair Display',serif;
 }
 .cta-section p{
-  color:#4a5568;
-  margin-bottom:25px;
+  color:var(--muted);
+  margin-bottom:28px;
+  font-size:0.95rem;
 }
 .cta-buttons{
   display:flex;
@@ -649,204 +584,246 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
   gap:20px;
   flex-wrap:wrap;
 }
+
+/* ── BUTTONS ─────────────────────────────────────── */
+.btn{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--navy);padding:14px 32px;
+  border-radius:100px;text-decoration:none;
+  font-weight:700;font-size:0.88rem;
+  transition:all 0.3s ease;
+  display:inline-flex;align-items:center;gap:8px;
+  border:none;letter-spacing:0.3px;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(201,160,76,0.3);
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-gold);
+}
+.btn-outline{
+  border:1.5px solid rgba(201,160,76,0.45);
+  padding:14px 32px;border-radius:100px;
+  color:var(--text);text-decoration:none;
+  transition:all 0.3s;background:transparent;
+  font-weight:600;font-size:0.88rem;
+  cursor:pointer;display:inline-flex;
+  align-items:center;gap:8px;
+}
+.btn-outline:hover{
+  background:var(--gold-soft);
+  border-color:var(--gold);
+  transform:translateY(-3px);
+}
+
+/* ── FOOTER ─────────────────────────────────────── */
 footer{
-  background:rgba(0,0,0,0.02);
-  padding:60px 0 30px;
-  margin-top:60px;
-  border-top:1px solid var(--border-light);
+  background:var(--navy);
+  padding:70px 0 30px;
+  margin-top:0;
 }
 .footer-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
   gap:40px;
-  margin-bottom:40px;
+  margin-bottom:50px;
 }
 .footer-col h4{
-  color:var(--gold);
-  margin-bottom:20px;
-  font-size:1.1rem;
+  font-family:'Poppins',sans-serif;
+  color:#fff;margin-bottom:18px;font-size:0.9rem;
+  font-weight:700;letter-spacing:0.3px;
 }
 .footer-col a{
-  display:block;
-  color:#4a5568;
-  text-decoration:none;
-  margin-bottom:12px;
-  transition:.3s;
-  font-size:0.85rem;
+  display:block;color:rgba(255,255,255,0.5);
+  text-decoration:none;margin-bottom:10px;
+  transition:all 0.25s;font-size:0.82rem;
 }
-.footer-col a:hover{
-  color:var(--gold);
-  padding-left:5px;
-}
+.footer-col a:hover{color:var(--gold);padding-left:4px;}
 .footer-col p{
-  color:#4a5568;
-  font-size:0.85rem;
-  margin-bottom:10px;
+  color:rgba(255,255,255,0.5);font-size:0.82rem;
+  margin-bottom:8px;line-height:1.6;
 }
-.hours{
-  font-size:0.85rem;
-  color:#4a5568;
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.footer-logo img{height:55px;filter:brightness(1.1);}
+.footer-logo-name{
+  font-family:'Poppins',sans-serif;font-weight:800;
+  font-size:1.05rem;color:#fff;
 }
-.hours p{
-  margin-bottom:6px;
+.footer-logo-tagline{
+  font-size:0.6rem;color:var(--gold);
+  letter-spacing:1.5px;text-transform:uppercase;
+  font-family:'Poppins',sans-serif;
 }
-.social-links{
-  display:flex;
-  gap:12px;
-  margin-top:15px;
-}
+.social-links{display:flex;gap:10px;margin-top:18px;}
 .social-links a{
-  width:34px;
-  height:34px;
-  background:rgba(0,0,0,0.05);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--text-dark);
-  text-decoration:none;
-  transition:.3s;
+  width:36px;height:36px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:10px;display:flex;
+  align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.6);text-decoration:none;
+  transition:all 0.25s;font-size:0.85rem;
+  margin-bottom:0;
 }
 .social-links a:hover{
-  background:var(--gold);
-  color:var(--white);
-  transform:translateY(-3px);
+  background:var(--gold);color:#fff;
+  border-color:var(--gold);
+  transform:translateY(-3px);padding-left:0;
+}
+.footer-divider{
+  height:1px;background:rgba(255,255,255,0.07);
+  margin-bottom:24px;
 }
 .copyright{
-  text-align:center;
-  padding-top:30px;
-  border-top:1px solid var(--border-light);
-  color:#4a5568;
-  font-size:0.8rem;
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:10px;
+  color:rgba(255,255,255,0.35);font-size:0.76rem;
 }
-.reveal{
-  opacity:0;
-  transform:translateY(30px);
-  transition:all 0.8s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
+.copyright a{color:var(--gold);text-decoration:none;}
+
+/* ── WHATSAPP FLOAT ──────────────────────────────── */
 .whatsapp{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  width:55px;
-  height:55px;
+  position:fixed;bottom:28px;right:28px;
+  width:54px;height:54px;background:#25D366;
+  border-radius:50%;display:flex;
+  align-items:center;justify-content:center;
+  text-decoration:none;color:#fff;
+  font-size:1.5rem;z-index:997;
+  box-shadow:0 8px 24px rgba(37,211,102,0.4);
+  transition:all 0.3s;
+}
+.whatsapp:hover{transform:scale(1.1);box-shadow:0 12px 32px rgba(37,211,102,0.5);}
+.whatsapp-pulse{
+  position:absolute;inset:0;border-radius:50%;
   background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  color:white;
-  font-size:1.6rem;
-  z-index:999;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:all 0.3s ease;
+  animation:wpulse 2s ease-out infinite;z-index:-1;
 }
-.whatsapp:hover{
-  transform:scale(1.1);
+@keyframes wpulse{
+  0%{transform:scale(1);opacity:0.7;}
+  100%{transform:scale(1.8);opacity:0;}
 }
-#progress-bar{
-  position:fixed;
-  top:0;left:0;
-  height:3px;
-  background:linear-gradient(90deg,var(--gold),var(--gold2));
-  z-index:9999;
-  width:0%;
-  transition:width 0.1s linear;
+
+/* ── SCROLL REVEAL ───────────────────────────────── */
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity 0.65s ease,transform 0.65s ease;
 }
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+
+/* ── MOBILE RESPONSIVE ───────────────────────────── */
 @media(max-width:980px){
-  .page-hero h1{font-size:2.8rem;}
-  .contact-grid{grid-template-columns:1fr;}
-  .faq-grid{grid-template-columns:1fr;}
+  .menu-toggle{display:flex;}
   .nav-links{
-    position:fixed;
-    top:90px;
-    left:-100%;
-    width:80%;
-    height:calc(100vh - 90px);
-    background:var(--white);
-    flex-direction:column;
-    align-items:center;
+    position:fixed;top:0;left:-100%;
+    width:82%;height:100vh;
+    background:#fff;
+    flex-direction:column;align-items:flex-start;
     justify-content:flex-start;
-    padding-top:40px;
-    transition:left 0.3s ease;
-    gap:25px;
-    z-index:998;
-    border-right:1px solid var(--border-light);
+    padding:80px 32px 40px;
+    transition:left 0.35s cubic-bezier(0.4,0,0.2,1);
+    gap:6px;z-index:997;
+    border-right:1px solid var(--border);
+    box-shadow:8px 0 30px rgba(0,0,0,0.12);
   }
-  .nav-links.active{
-    left:0;
+  .nav-links.active{left:0;}
+  .nav-overlay{
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.4);
+    z-index:996;opacity:0;pointer-events:none;
+    transition:opacity 0.3s;
   }
-  .menu-toggle{
-    display:block;
+  .nav-overlay.active{opacity:1;pointer-events:all;}
+  .nav-links a{
+    width:100%;padding:13px 16px;
+    border-radius:12px;font-size:1rem;
   }
-  body{cursor:auto;}
-  .cursor-dot,.cursor-ring{display:none;}
-  .navbar{top:61px;}
-  .navbar.scrolled{top:0;}
+  .nav-links a:hover{background:var(--gold-soft);}
+  .nav-links a::after{display:none;}
+  .nav-cta{
+    margin-top:10px;width:100%;
+    justify-content:center;text-align:center;
+  }
+  .page-hero h1{font-size:2.5rem;}
+  .contact-grid{grid-template-columns:1fr;gap:40px;}
+  .trust-stats{grid-template-columns:repeat(2,1fr);}
+  .trust-stat:nth-child(2){border-right:none;}
+  .trust-stat:nth-child(3){border-top:1px solid var(--border);}
+  .trust-stat:nth-child(4){border-top:1px solid var(--border);border-right:none;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .logo img{height:72px;}
+  .logo-name{font-size:1.05rem;}
 }
 @media(max-width:600px){
-  .page-hero h1{font-size:2rem;}
+  .page-hero h1{font-size:1.8rem;}
   .container{padding:0 20px;}
-  .top-bar .container{justify-content:center;}
-  .navbar{top:78px;}
-  .contact-info,.contact-form-wrapper{padding:25px;}
+  .top-contact-bar .container{justify-content:center;gap:16px;flex-wrap:wrap;}
+  .contact-form-wrapper{padding:28px 20px;}
+  .form-row{grid-template-columns:1fr;}
   .interests-grid{grid-template-columns:1fr;}
-  .trust-stats{gap:20px;}
-  .trust-stat .number{font-size:1.5rem;}
+  .form-buttons{flex-direction:column;}
+  .submit-btn,.whatsapp-submit{width:100%;justify-content:center;}
+  .trust-stats{grid-template-columns:1fr;}
+  .trust-stat{border-right:none;border-bottom:1px solid var(--border);}
+  .trust-stat:last-child{border-bottom:none;}
+  .faq-grid{grid-template-columns:1fr;}
+  .cta-section{padding:35px 25px;}
+  .cta-section h2{font-size:1.4rem;}
+  .cta-buttons{flex-direction:column;align-items:center;}
+  .btn,.btn-outline{width:100%;justify-content:center;}
+  .footer-grid{grid-template-columns:1fr;}
+  .logo img{height:56px;}
+  .logo-name{font-size:0.95rem;}
+  .logo-tagline{display:none;}
 }
 </style>
 </head>
 <body>
 <div id="progress-bar"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="spotlight" id="spotlight"></div>
-<canvas id="particles"></canvas>
+<div class="nav-overlay" id="navOverlay"></div>
 
-<div class="top-bar">
+<!-- TOP BAR -->
+<div class="top-contact-bar">
   <div class="container">
-    <div class="top-contact">
-      <a href="tel:+254702741067"><i class="fas fa-phone-alt"></i> +254 702 741 067</a>
-      <a href="mailto:consult@fredndonga.co.ke"><i class="fas fa-envelope"></i> consult@fredndonga.co.ke</a>
-    </div>
+    <a href="tel:+254702741067"><i class="fas fa-phone-alt"></i> +254 702 741 067</a>
+    <a href="mailto:consult@primeconsulting.co.ke"><i class="fas fa-envelope"></i> consult@primeconsulting.co.ke</a>
   </div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="container nav-inner">
-    <div class="logo">
-      <img src="https://i.postimg.cc/V6Fx2f0R/logo-fred.png" alt="Fred Ndonga">
-      <div>
-        <h2>FRED NDONGA</h2>
-        <span>HOSPITALITY CONSULTANT</span>
+    <a href="index.html#home" class="logo">
+      <img src="https://res.cloudinary.com/dvqjgbdhp/image/upload/v1780431597/ChatGPT_Image_Jun_2_2026_11_17_46_PM_k1gh3t.png" alt="Prime Consulting Group">
+      <div class="logo-text">
+        <span class="logo-name">Prime Consulting Group</span>
+        <span class="logo-tagline">Hospitality Consultants · Kenya</span>
       </div>
-    </div>
-    <div class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bars"></i>
-    </div>
+    </a>
+    <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
     <div class="nav-links" id="navLinks">
       <a href="index.html#home">Home</a>
       <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
+      <a href="services.html">Services</a>
       <a href="blog.html">Insights</a>
       <a href="index.html#contact">Contact</a>
+      <a href="index.html#contact" class="nav-cta">Book Consultation</a>
     </div>
   </div>
 </nav>
 
 <main>
-  <section class="page-hero container">
-    <div class="reveal">
-      <h1>Get in Touch</h1>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container reveal">
+      <h1>Get In <span>Touch</span></h1>
       <p>Ready to fix what's broken? Let's talk. No pressure, just honest advice.</p>
     </div>
   </section>
 
+  <!-- TRUST STATS -->
   <div class="container">
     <div class="trust-stats reveal">
       <div class="trust-stat"><div class="number">85+</div><div class="label">Establishments Consulted</div></div>
@@ -856,41 +833,26 @@ footer{
     </div>
   </div>
 
+  <!-- CONTACT GRID -->
   <div class="container">
     <div class="contact-grid">
-      <!-- Contact Info Side (White Card) -->
+      <!-- Contact Info Side -->
       <div class="contact-info reveal">
-        <div class="info-item">
+        <div class="contact-info-header">
+          <h3>We're here to help your business grow.</h3>
+          <p>Reach out via any channel below. We respond within 24 hours.</p>
+        </div>
+        <div class="info-card">
           <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
-          <div class="info-details">
-            <h3>Call Me</h3>
-            <a href="tel:+254702741067">+254 702 741 067</a>
-          </div>
+          <div><h3>Call Us</h3><a href="tel:+254702741067">+254 702 741 067</a></div>
         </div>
-        <div class="info-item">
+        <div class="info-card">
           <div class="info-icon"><i class="fas fa-envelope"></i></div>
-          <div class="info-details">
-            <h3>Email Me</h3>
-            <a href="mailto:consult@fredndonga.co.ke">consult@fredndonga.co.ke</a>
-          </div>
+          <div><h3>Email Us</h3><a href="mailto:consult@primeconsulting.co.ke">consult@primeconsulting.co.ke</a></div>
         </div>
-        <div class="info-item">
+        <div class="info-card">
           <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
-          <div class="info-details">
-            <h3>WhatsApp</h3>
-            <a href="https://wa.me/254702741067">+254 702 741 067</a>
-          </div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon"><i class="fas fa-clock"></i></div>
-          <div class="info-details">
-            <h3>Office Hours</h3>
-            <div class="hours-list">
-              <p>Monday - Friday: 8:00am - 5:00pm</p>
-              <p>Saturday: 9:00am - 1:00pm</p>
-              <p>Sunday: Closed</p>
-            </div>
-          </div>
+          <div><h3>WhatsApp</h3><a href="https://wa.me/254702741067">+254 702 741 067</a></div>
         </div>
         <div class="response-badge">
           <i class="fas fa-bolt"></i> <span>Response within 24 hours — guaranteed.</span>
@@ -906,37 +868,39 @@ footer{
         </div>
       </div>
 
-      <!-- Contact Form Side (Dark Blue Card) -->
-      <div class="contact-form-wrapper reveal">
+      <!-- Contact Form Side -->
+      <div class="contact-form-wrapper reveal reveal-delay-2">
         <h3>Send a Message</h3>
-        <p style="color:var(--text-light); font-size:0.85rem; margin-bottom:25px;">Fill out the form below and I'll get back to you within 24 hours.</p>
+        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
         <form id="contactForm">
-          <div class="form-group">
-            <label>Full Name *</label>
-            <input type="text" id="name" required>
-          </div>
-          <div class="form-group">
-            <label>Phone Number *</label>
-            <input type="tel" id="phone" required>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="phone" placeholder="+254 7XX XXX XXX" required>
+            </div>
           </div>
           <div class="form-group">
             <label>Email Address *</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" placeholder="you@company.com" required>
           </div>
           <div class="form-group">
             <label>Business Type</label>
             <select id="business">
-              <option value="Hotel">Hotel</option>
-              <option value="Restaurant">Restaurant</option>
-              <option value="Resort">Resort</option>
-              <option value="Lodge/Safari Camp">Lodge / Safari Camp</option>
-              <option value="Catering Business">Catering Business</option>
-              <option value="Hospitality Startup">Hospitality Startup</option>
-              <option value="Other">Other</option>
+              <option>Hotel</option>
+              <option>Restaurant</option>
+              <option>Resort</option>
+              <option>Lodge/Safari Camp</option>
+              <option>Catering Business</option>
+              <option>Hospitality Startup</option>
+              <option>Other</option>
             </select>
           </div>
           <div class="checkbox-group">
-            <label>I'm interested in:</label>
+            <label>We're interested in:</label>
             <div class="interests-grid">
               <div class="interest-checkbox"><input type="checkbox" id="interest_hotels" value="Hotels & Resorts"> <label for="interest_hotels">Hotels & Resorts</label></div>
               <div class="interest-checkbox"><input type="checkbox" id="interest_restaurants" value="Restaurants"> <label for="interest_restaurants">Restaurants</label></div>
@@ -948,10 +912,10 @@ footer{
           </div>
           <div class="form-group">
             <label>Your Message *</label>
-            <textarea id="message" placeholder="Tell me about your challenges, goals, or what you need help with..."></textarea>
+            <textarea id="message" rows="4" placeholder="Tell us about your challenges, goals, or what you need help with..."></textarea>
           </div>
           <div class="form-buttons">
-            <button type="button" class="submit-btn" onclick="sendEmail()">Send via Email</button>
+            <button type="button" class="submit-btn" onclick="sendEmail()"><i class="fas fa-paper-plane"></i> Send via Email</button>
             <button type="button" class="whatsapp-submit" onclick="sendWhatsApp()"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
           </div>
         </form>
@@ -959,173 +923,153 @@ footer{
     </div>
   </div>
 
+  <!-- FAQ SECTION -->
   <div class="container">
     <div class="faq-section reveal">
       <div class="section-header">
+        <div class="section-label">Common Questions</div>
         <h2>Frequently Asked Questions</h2>
         <div class="section-divider"></div>
       </div>
       <div class="faq-grid">
         <div class="faq-item">
           <div class="faq-question"><i class="fas fa-clock"></i> How soon can you start?</div>
-          <div class="faq-answer">Typically within 1-2 weeks after our initial consultation. I move fast because I know you're dealing with real problems daily.</div>
+          <div class="faq-answer">Typically within 1-2 weeks after our initial consultation. We move fast because we know you're dealing with real problems daily.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question"><i class="fas fa-map-marker-alt"></i> Do you travel outside Nairobi?</div>
-          <div class="faq-answer">Yes. I work with hospitality businesses across Kenya — from Nairobi to the coast, Nakuru, Kisumu, and remote safari locations.</div>
+          <div class="faq-answer">Yes. We work with hospitality businesses across Kenya — from Nairobi to the coast, Nakuru, Kisumu, and remote safari locations.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question"><i class="fas fa-chart-line"></i> How long before I see results?</div>
+          <div class="faq-question"><i class="fas fa-chart-line"></i> How long before we see results?</div>
           <div class="faq-answer">Most clients see measurable improvements within the first 30 days — reduced complaints, faster service, and happier guests.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question"><i class="fas fa-file-invoice-dollar"></i> What does it cost?</div>
-          <div class="faq-answer">Every business is different. I offer custom quotes based on your specific needs. Book a free call and I'll give you an honest assessment.</div>
+          <div class="faq-answer">Every business is different. We offer custom quotes based on your specific needs. Book a free call and we'll give you an honest assessment.</div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- CTA SECTION -->
   <div class="container">
     <div class="cta-section reveal">
       <h2>Not ready to fill a form?</h2>
       <p>Book a free 20-minute discovery call. No pitch. Just listening and honest advice.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/254702741067" class="btn magnetic"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-        <a href="tel:+254702741067" class="btn-outline magnetic"><i class="fas fa-phone-alt"></i> Call Directly</a>
+        <a href="https://wa.me/254702741067" class="btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        <a href="tel:+254702741067" class="btn-outline"><i class="fas fa-phone-alt"></i> Call Directly</a>
       </div>
     </div>
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Fred Ndonga</h4><p>Hospitality Service & Operations Consultant</p><div class="social-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div></div>
-      <div class="footer-col"><h4>Quick Links</h4><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="blog.html">Insights</a><a href="index.html#contact">Contact</a></div>
-      <div class="footer-col"><h4>Resources</h4><a href="#">Consultation Guide</a><a href="#">Hospitality Blog</a><a href="#">Client Success Stories</a><a href="#">Training Programs</a></div>
-      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-phone"></i> +254 702 741 067</p><p><i class="fas fa-envelope"></i> consult@fredndonga.co.ke</p><div class="hours"><p><strong>Office Hours:</strong></p><p>Mon - Fri: 8am - 5pm</p><p>Saturday: 9am - 1pm</p><p>Sunday: Closed</p></div></div>
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://res.cloudinary.com/dvqjgbdhp/image/upload/v1780431597/ChatGPT_Image_Jun_2_2026_11_17_46_PM_k1gh3t.png" alt="Prime Consulting Group">
+          <div>
+            <div class="footer-logo-name">Prime Consulting Group</div>
+            <div class="footer-logo-tagline">Hospitality Consultants · Kenya</div>
+          </div>
+        </div>
+        <p>Helping Kenya's hospitality industry build service cultures and profitable operations since 2015.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Insights</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Consultation Guide</a>
+        <a href="#">Hospitality Blog</a>
+        <a href="#">Client Success Stories</a>
+        <a href="#">Training Programs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone" style="color:var(--gold);margin-right:8px;"></i> +254 702 741 067</p>
+        <p><i class="fas fa-envelope" style="color:var(--gold);margin-right:8px;"></i> consult@primeconsulting.co.ke</p>
+        <p style="margin-top:16px;"><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:8px;"></i> Nairobi, Kenya</p>
+      </div>
     </div>
-    <div class="copyright"><p>© 2025 Fred Ndonga Hospitality Consultancy. All rights reserved.</p></div>
+    <div class="footer-divider"></div>
+    <div class="copyright">
+      <span>© 2025 Prime Consulting Group. All rights reserved.</span>
+      <span>Hospitality Excellence · <a href="#">Back to top ↑</a></span>
+    </div>
   </div>
 </footer>
 
-<a href="https://wa.me/254702741067" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://wa.me/254702741067" class="whatsapp" target="_blank">
+  <div class="whatsapp-pulse"></div>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <script>
+// Progress bar
 const progressBar = document.getElementById('progress-bar');
-if(progressBar){
-  window.addEventListener('scroll', () => {
-    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    progressBar.style.width = scrolled + '%';
-  });
-}
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  if(progressBar) progressBar.style.width = pct + '%';
+});
+
+// Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 80);
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
-const dot = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
-let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX; mouseY = e.clientY;
-  if(dot){ dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px'; }
-  const spotlight = document.getElementById('spotlight');
-  if(spotlight){ spotlight.style.left = mouseX + 'px'; spotlight.style.top = mouseY + 'px'; }
-});
-function animateRing() {
-  if(!ring) return;
-  ringX += (mouseX - ringX) * 0.12;
-  ringY += (mouseY - ringY) * 0.12;
-  ring.style.left = ringX + 'px';
-  ring.style.top = ringY + 'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
-document.querySelectorAll('a, button, .info-item, .faq-item, .trust-stat').forEach(el => {
-  if(!ring) return;
-  el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-  el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
-});
-const canvas = document.getElementById('particles');
-if(canvas){
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  resize();
-  window.addEventListener('resize', resize);
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.3;
-      this.speedY = (Math.random() - 0.5) * 0.3;
-      this.opacity = Math.random() * 0.3 + 0.1;
-      this.gold = Math.random() > 0.8;
-    }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.gold ? `rgba(201,160,76,${this.opacity})` : `rgba(100,100,100,${this.opacity * 0.15})`;
-      ctx.fill();
-    }
-  }
-  for (let i = 0; i < 80; i++) particles.push(new Particle());
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(animateParticles);
-  }
-  animateParticles();
-}
-function reveal() {
-  document.querySelectorAll('.reveal').forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) el.classList.add('active');
-  });
-}
-window.addEventListener('scroll', reveal);
-reveal();
+
+// Mobile menu
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
-if(menuToggle && navLinks){
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-    if(icon){
-      if(navLinks.classList.contains('active')){
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-      } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
-    }
-  });
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      const icon = menuToggle.querySelector('i');
-      if(icon){
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
-    });
-  });
+const navOverlay = document.getElementById('navOverlay');
+
+function openMenu(){
+  navLinks.classList.add('active');
+  navOverlay.classList.add('active');
+  menuToggle.querySelector('i').className = 'fas fa-times';
 }
-function sendWhatsApp() {
+function closeMenu(){
+  navLinks.classList.remove('active');
+  navOverlay.classList.remove('active');
+  menuToggle.querySelector('i').className = 'fas fa-bars';
+}
+if(menuToggle){
+  menuToggle.addEventListener('click', () => navLinks.classList.contains('active') ? closeMenu() : openMenu());
+}
+if(navOverlay) navOverlay.addEventListener('click', closeMenu);
+document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', closeMenu));
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.12});
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Form handlers
+function sendWhatsApp(){
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
   const email = document.getElementById('email').value;
   const business = document.getElementById('business').value;
   const message = document.getElementById('message').value;
+  
   let interests = [];
   if(document.getElementById('interest_hotels')?.checked) interests.push('Hotels & Resorts');
   if(document.getElementById('interest_restaurants')?.checked) interests.push('Restaurants');
@@ -1134,19 +1078,22 @@ function sendWhatsApp() {
   if(document.getElementById('interest_events')?.checked) interests.push('Events & Banqueting');
   if(document.getElementById('interest_startup')?.checked) interests.push('Startup Support');
   const interestsText = interests.length > 0 ? interests.join(', ') : 'Not specified';
+  
   if(!name || !phone || !email){
     alert('Please fill in your name, phone number, and email address.');
     return;
   }
-  const text = `Hello Fred Ndonga,%0A%0A*New Consultation Request*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Business Type:* ${business}%0A*Interested in:* ${interestsText}%0A*Message:* ${message}%0A%0AThank you!`;
+  const text = `Hello Prime Consulting Group,%0A%0A*New Consultation Request*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Business Type:* ${business}%0A*Interested in:* ${interestsText}%0A*Message:* ${message}%0A%0AThank you!`;
   window.open(`https://wa.me/254702741067?text=${text}`, '_blank');
 }
-function sendEmail() {
+
+function sendEmail(){
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
   const email = document.getElementById('email').value;
   const business = document.getElementById('business').value;
   const message = document.getElementById('message').value;
+  
   let interests = [];
   if(document.getElementById('interest_hotels')?.checked) interests.push('Hotels & Resorts');
   if(document.getElementById('interest_restaurants')?.checked) interests.push('Restaurants');
@@ -1155,13 +1102,14 @@ function sendEmail() {
   if(document.getElementById('interest_events')?.checked) interests.push('Events & Banqueting');
   if(document.getElementById('interest_startup')?.checked) interests.push('Startup Support');
   const interestsText = interests.length > 0 ? interests.join(', ') : 'Not specified';
+  
   if(!name || !phone || !email){
     alert('Please fill in your name, phone number, and email address.');
     return;
   }
   const subject = `Consultation Request from ${name}`;
   const body = `Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0ABusiness Type: ${business}%0AInterested in: ${interestsText}%0A%0AMessage:%0A${message}%0A%0AThank you.`;
-  window.location.href = `mailto:consult@fredndonga.co.ke?subject=${encodeURIComponent(subject)}&body=${body}`;
+  window.location.href = `mailto:consult@primeconsulting.co.ke?subject=${encodeURIComponent(subject)}&body=${body}`;
 }
 </script>
 </body>

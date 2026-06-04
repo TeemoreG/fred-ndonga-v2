@@ -3,376 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Fred Ndonga | About</title>
+<title>Prime Consulting Group | About Us</title>
+<meta name="description" content="Prime Consulting Group - Kenya's premier hospitality consultants. With over a decade of experience at Sarova Hotels and Kenya Utalii College certification, we transform hospitality operations.">
+<meta name="keywords" content="about hospitality consultant Kenya, Prime Consulting Group, hotel consultant Kenya, restaurant consultant">
+<meta name="author" content="Prime Consulting Group">
+<meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
+/* ── TOKENS ─────────────────────────────────────── */
 :root{
   --gold:#c9a04c;
   --gold2:#dab866;
-  --card-bg-dark:#1a2744;
-  --card-bg-dark-light:#23305c;
-  --body-bg:#f4f6fa;
-  --text-dark:#1a2744;
-  --text-light:#cbd5e1;
+  --gold-soft:rgba(201,160,76,0.12);
+  --navy:#0f1e3d;
+  --navy2:#1a2f5a;
+  --blue:#1a56db;
+  --body-bg:#f8f7f4;
   --white:#ffffff;
-  --border-light:rgba(0,0,0,0.08);
+  --text:#1a2744;
+  --muted:#64748b;
+  --light:#cbd5e1;
+  --border:rgba(0,0,0,0.07);
+  --radius:20px;
+  --shadow-sm:0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md:0 8px 30px rgba(0,0,0,0.10);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.13);
+  --shadow-gold:0 12px 40px rgba(201,160,76,0.22);
 }
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-html{
-  scroll-behavior:smooth;
-}
+
+/* ── RESET ──────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-family:'DM Sans',-apple-system,sans-serif;
   background:var(--body-bg);
-  color:var(--text-dark);
+  color:var(--text);
   overflow-x:hidden;
-  cursor:none;
 }
-h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-header h2{
-  font-family:'Poppins','Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+h1,h2,h3,h4{font-family:'Playfair Display',serif;}
+.nav-links a,.btn,.hero-badge,.section-header h2,.btn-outline,.logo-name,.logo-tagline{
+  font-family:'Poppins',sans-serif;
 }
-.cursor-dot{
-  width:8px;
-  height:8px;
-  background:var(--gold);
-  border-radius:50%;
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px;}
+
+/* ── NOISE TEXTURE OVERLAY ──────────────────────── */
+body::before{
+  content:'';
   position:fixed;
-  top:0;left:0;
-  transform:translate(-50%,-50%);
-  transition:transform 0.1s ease;
-  pointer-events:none;
-  z-index:99999;
-}
-.cursor-ring{
-  width:36px;
-  height:36px;
-  border:1.5px solid rgba(201,160,76,0.6);
-  border-radius:50%;
-  position:fixed;
-  top:0;left:0;
-  transform:translate(-50%,-50%);
-  pointer-events:none;
-  z-index:99998;
-  transition:width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
-}
-.cursor-ring.hovered{
-  width:60px;
-  height:60px;
-  border-color:var(--gold);
-  background:rgba(201,160,76,0.05);
-}
-#particles{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events:none;
   z-index:0;
-  opacity:0.12;
+  opacity:0.4;
 }
-.spotlight{
-  position:fixed;
-  width:500px;
-  height:500px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(201,160,76,0.06) 0%, transparent 70%);
-  pointer-events:none;
-  transform:translate(-50%,-50%);
-  z-index:1;
-  transition:left 0.2s ease, top 0.2s ease;
+
+/* ── PROGRESS BAR ───────────────────────────────── */
+#progress-bar{
+  position:fixed;top:0;left:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2),var(--blue));
+  z-index:9999;width:0%;
+  transition:width 0.1s linear;
+  box-shadow:0 0 10px var(--gold);
 }
-::-webkit-scrollbar{
-  width:6px;
-}
-::-webkit-scrollbar-thumb{
-  background:var(--gold);
-  border-radius:10px;
-}
+
+/* ── CONTAINER ──────────────────────────────────── */
 .container{
-  width:100%;
-  max-width:1280px;
-  margin:auto;
-  padding:0 30px;
+  width:100%;max-width:1280px;
+  margin:auto;padding:0 32px;
+  position:relative;z-index:2;
+}
+
+/* ── TOP CONTACT BAR ────────────────────────────── */
+.top-contact-bar{
+  background:var(--navy);
+  padding:9px 0;
   position:relative;
-  z-index:2;
+  z-index:1000;
 }
-.top-bar{
-  background:var(--white);
-  border-bottom:1px solid var(--border-light);
-  padding:10px 0;
-  position:relative;
-  z-index:1001;
+.top-contact-bar .container{
+  display:flex;justify-content:flex-end;gap:28px;flex-wrap:wrap;
 }
-.top-bar .container{
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:25px;
+.top-contact-bar a{
+  color:rgba(255,255,255,0.75);
+  text-decoration:none;font-size:0.78rem;
+  display:inline-flex;align-items:center;gap:7px;
+  transition:color 0.25s;
+  font-family:'DM Sans',sans-serif;
 }
-.top-contact{
-  display:flex;
-  gap:25px;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.top-contact a{
-  color:#4a5568;
-  text-decoration:none;
-  font-size:0.85rem;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  transition:color 0.3s ease;
-}
-.top-contact a i{
-  color:var(--gold);
-  font-size:0.9rem;
-}
-.top-contact a:hover{
-  color:var(--gold);
-}
+.top-contact-bar a i{color:var(--gold);font-size:0.8rem;}
+.top-contact-bar a:hover{color:#fff;}
+
+/* ── NAVBAR ─────────────────────────────────────── */
 .navbar{
-  position:fixed;
-  width:100%;
-  top:41px;
-  z-index:999;
-  backdrop-filter:blur(16px);
-  background:rgba(255,255,255,0.95);
-  border-bottom:1px solid var(--border-light);
-  transition:all 0.3s ease;
+  position:sticky;
+  top:0;
+  z-index:998;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow 0.3s,background 0.3s;
 }
 .navbar.scrolled{
-  top:0;
-  background:rgba(255,255,255,0.98);
-  box-shadow:0 4px 30px rgba(0,0,0,0.08);
+  box-shadow:0 4px 24px rgba(0,0,0,0.08);
+  background:rgba(255,255,255,0.99);
 }
 .nav-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 0;
+  padding:10px 0;
+  gap:20px;
 }
-.logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .logo img{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  object-fit:cover;
-  background:var(--card-bg-dark);
-  padding:3px;
-  border:1px solid var(--gold);
-  transition:transform 0.3s ease;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  height:90px;width:auto;object-fit:contain;
+  transition:transform 0.3s;
 }
-.logo img:hover{
-  transform:scale(1.05);
+.logo:hover img{transform:scale(1.03);}
+.logo-text{display:flex;flex-direction:column;line-height:1.2;}
+.logo-name{
+  font-size:1.25rem;font-weight:800;
+  color:var(--blue);letter-spacing:-0.3px;
 }
-.logo h2{
-  font-size:1.3rem;
-  font-weight:700;
-  letter-spacing:-0.5px;
-  color:var(--text-dark);
+.logo-tagline{
+  font-size:0.64rem;font-weight:500;
+  color:var(--gold);letter-spacing:1.8px;
+  text-transform:uppercase;
 }
-.logo span{
-  font-size:.75rem;
-  color:var(--gold);
-  letter-spacing:1px;
-  font-weight:500;
-}
-.nav-links{
-  display:flex;
-  gap:30px;
-  align-items:center;
-}
+.nav-links{display:flex;gap:28px;align-items:center;}
 .nav-links a{
-  color:var(--text-dark);
-  text-decoration:none;
-  font-weight:500;
-  transition:.3s;
-  font-size:0.95rem;
-  letter-spacing:0.3px;
-  position:relative;
+  color:var(--text);text-decoration:none;
+  font-weight:500;font-size:0.88rem;
+  letter-spacing:0.2px;position:relative;
+  transition:color 0.25s;
 }
 .nav-links a::after{
-  content:'';
-  position:absolute;
-  bottom:-5px;
-  left:0;
-  width:0;
-  height:2px;
-  background:var(--gold);
-  transition:width 0.3s ease;
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+  border-radius:2px;transition:width 0.3s ease;
 }
-.nav-links a:hover::after{
-  width:100%;
-}
-.nav-links a:hover{
-  color:var(--gold);
-}
-.menu-toggle{
-  display:none;
-  font-size:1.5rem;
-  color:var(--text-dark);
-  cursor:pointer;
-  z-index:1000;
-}
-.btn{
+.nav-links a:hover::after{width:100%;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{
   background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:var(--text-dark);
-  padding:12px 28px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:600;
-  transition:all .3s ease;
-  display:inline-block;
-  border:none;
-  cursor:none;
-  letter-spacing:0.5px;
-  position:relative;
-  overflow:hidden;
-  font-size:0.9rem;
-  font-family:'Poppins','Montserrat',sans-serif;
+  color:var(--navy)!important;
+  padding:9px 22px;border-radius:100px;
+  font-weight:700!important;font-size:0.82rem!important;
+  transition:all 0.3s!important;
+  box-shadow:0 4px 16px rgba(201,160,76,0.3);
 }
-.btn::after{
-  content:'';
-  position:absolute;
-  top:50%;left:50%;
-  width:0;height:0;
-  background:rgba(255,255,255,0.3);
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-  transition:width 0.5s ease, height 0.5s ease;
+.nav-cta:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 8px 24px rgba(201,160,76,0.4)!important;
 }
-.btn:active::after{
-  width:300px;height:300px;
+.nav-cta::after{display:none!important;}
+.menu-toggle{
+  display:none;font-size:1.4rem;
+  color:var(--text);cursor:pointer;
+  width:40px;height:40px;
+  background:#f1f5f9;border-radius:10px;
+  align-items:center;justify-content:center;
+  transition:background 0.2s;
 }
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 35px rgba(201,160,76,0.35), 0 0 0 1px rgba(201,160,76,0.3);
-}
-.btn-outline{
-  border:1.5px solid rgba(201,160,76,0.5);
-  padding:12px 28px;
-  border-radius:40px;
-  color:var(--text-dark);
-  text-decoration:none;
-  transition:.3s;
-  background:transparent;
-  font-weight:500;
-  position:relative;
-  overflow:hidden;
-  font-size:0.9rem;
-  font-family:'Poppins','Montserrat',sans-serif;
-}
-.btn-outline::before{
-  content:'';
-  position:absolute;
-  top:0;left:-100%;
-  width:100%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(201,160,76,0.1),transparent);
-  transition:left 0.5s ease;
-}
-.btn-outline:hover::before{
-  left:100%;
-}
-.btn-outline:hover{
-  background:rgba(201,160,76,0.1);
-  border-color:var(--gold);
-  transform:translateY(-3px);
-}
+.menu-toggle:hover{background:var(--gold-soft);}
+
+/* ── PAGE HERO ──────────────────────────────────── */
 .page-hero{
-  min-height:60vh;
+  min-height:50vh;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding-top:160px;
-  padding-bottom:0px;
+  padding:120px 0 60px;
+  background:linear-gradient(135deg, rgba(15,30,61,0.04) 0%, rgba(201,160,76,0.06) 100%);
 }
 .page-hero h1{
-  font-size:4rem;
-  margin-bottom:20px;
-  background:linear-gradient(135deg,var(--text-dark) 30%,#c9a04c 80%);
+  font-family:'Playfair Display',serif;
+  font-size:3.5rem;
+  margin-bottom:18px;
+  color:var(--navy);
+  font-weight:800;
+  letter-spacing:-1px;
+}
+.page-hero h1 span{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 .page-hero p{
-  color:#4a5568;
-  font-size:1.2rem;
-  max-width:700px;
+  color:var(--muted);
+  font-size:1.1rem;
+  max-width:650px;
   margin:0 auto;
+  line-height:1.7;
 }
-.section-header{
-  text-align:center;
-  margin-bottom:50px;
-}
+
+/* ── SECTION COMMONS ─────────────────────────────── */
+.section-wrap{padding:80px 0;}
+.section-header{text-align:center;margin-bottom:55px;}
 .section-header h2{
-  font-size:2.5rem;
-  margin-bottom:15px;
-  color:var(--text-dark);
-  font-weight:700;
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;margin-bottom:14px;
+  color:var(--navy);font-weight:700;
 }
 .section-header .section-sub{
-  color:#4a5568;
-  font-size:1rem;
-  max-width:700px;
-  margin:0 auto;
+  color:var(--muted);font-size:0.95rem;
+  max-width:620px;margin:0 auto;line-height:1.7;
 }
 .section-divider{
-  width:60px;
-  height:3px;
+  width:48px;height:3px;
   background:linear-gradient(90deg,var(--gold),var(--gold2));
-  border-radius:2px;
-  margin:20px auto 0;
+  border-radius:2px;margin:18px auto 0;
 }
+.section-label{
+  display:inline-block;
+  font-family:'Poppins',sans-serif;
+  font-size:0.7rem;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+  padding:5px 14px;border-radius:100px;
+  background:var(--gold-soft);
+  border:1px solid rgba(201,160,76,0.2);
+}
+
+/* ── ABOUT STORY ─────────────────────────────────── */
 .about-story{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
-  margin:10px 0;
+  margin:60px 0;
   align-items:center;
+}
+.about-story-image{
+  position:relative;
 }
 .about-story-image img{
   width:100%;
-  border-radius:30px;
+  border-radius:28px;
+  border:1px solid rgba(201,160,76,0.15);
+  box-shadow:var(--shadow-lg);
+}
+.about-story-image-badge{
+  position:absolute;
+  bottom:-18px;right:-18px;
+  background:var(--navy);
+  border-radius:18px;
+  padding:16px 22px;
   border:1px solid rgba(201,160,76,0.2);
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  box-shadow:var(--shadow-md);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.about-story-image-badge i{color:var(--gold);font-size:1.4rem;}
+.about-story-image-badge span{
+  font-size:0.8rem;color:#fff;font-weight:600;
+  font-family:'Poppins',sans-serif;line-height:1.3;
 }
 .about-story-content h2{
+  font-family:'Playfair Display',serif;
   font-size:2rem;
   margin-bottom:20px;
-  color:var(--gold);
-  font-style:normal;
-  font-weight:bold;
+  color:var(--navy);
+  font-weight:700;
 }
 .about-story-content p{
-  color:#4a5568;
-  line-height:1.8;
+  color:var(--muted);
+  line-height:1.85;
   margin-bottom:20px;
-  font-size:1rem;
+  font-size:0.95rem;
 }
 .story-signature{
   margin-top:30px;
   padding-top:20px;
-  border-top:1px solid var(--border-light);
+  border-top:1px solid var(--border);
   color:var(--gold);
   font-style:italic;
+  font-size:1rem;
+  font-family:'Playfair Display',serif;
 }
+
+/* ── TIMELINE VERTICAL ───────────────────────────── */
 .timeline-vertical{
   position:relative;
   max-width:800px;
-  margin:80px auto;
+  margin:60px auto;
   padding-left:40px;
 }
 .timeline-vertical::before{
@@ -382,17 +303,15 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
   top:0;
   bottom:0;
   width:3px;
-  background:linear-gradient(180deg, var(--gold), var(--gold2), rgba(201,160,76,0.2));
+  background:linear-gradient(180deg, var(--gold), var(--gold2), rgba(201,160,76,0.15));
   border-radius:3px;
 }
 .timeline-node{
   position:relative;
-  margin-bottom:60px;
+  margin-bottom:50px;
   padding-left:50px;
 }
-.timeline-node:last-child{
-  margin-bottom:0;
-}
+.timeline-node:last-child{margin-bottom:0;}
 .timeline-dot{
   position:absolute;
   left:-5px;
@@ -411,7 +330,7 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
 }
 .timeline-node:hover .timeline-dot{
   transform:scale(1.1);
-  box-shadow:0 0 0 12px rgba(201,160,76,0.2);
+  box-shadow:0 0 0 12px rgba(201,160,76,0.15);
 }
 .timeline-dot i{
   font-size:1.2rem;
@@ -420,54 +339,56 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
 .timeline-content{
   background:var(--white);
   border-radius:20px;
-  padding:25px;
-  border:1px solid var(--border-light);
+  padding:28px;
+  border:1px solid var(--border);
   transition:all 0.3s ease;
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+  box-shadow:var(--shadow-sm);
 }
 .timeline-content:hover{
   transform:translateX(8px);
-  background:var(--white);
   border-color:rgba(201,160,76,0.3);
-  box-shadow:0 12px 24px rgba(0,0,0,0.08);
+  box-shadow:var(--shadow-md);
 }
 .timeline-year{
-  font-size:1.3rem;
+  font-size:0.85rem;
   font-weight:700;
   color:var(--gold);
   margin-bottom:10px;
-  letter-spacing:1px;
+  letter-spacing:1.5px;
+  font-family:'Poppins',sans-serif;
 }
 .timeline-content h3{
-  font-size:1.3rem;
-  margin-bottom:10px;
-  color:var(--text-dark);
+  font-size:1.25rem;
+  margin-bottom:12px;
+  color:var(--navy);
+  font-weight:700;
 }
 .timeline-content p{
-  color:#4a5568;
-  line-height:1.6;
-  font-size:0.9rem;
+  color:var(--muted);
+  line-height:1.65;
+  font-size:0.88rem;
 }
+
+/* ── CREDENTIALS GRID ───────────────────────────── */
 .credentials-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:30px;
-  margin:80px 0;
+  margin:60px 0;
 }
 .cred-card{
   background:var(--white);
   border-radius:24px;
   padding:35px;
-  transition:all 0.3s ease;
+  transition:all 0.35s ease;
   text-align:center;
-  border:1px solid var(--border-light);
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
 }
 .cred-card:hover{
-  transform:translateY(-5px);
-  background:var(--white);
+  transform:translateY(-6px);
   border-color:rgba(201,160,76,0.3);
-  box-shadow:0 12px 24px rgba(0,0,0,0.08);
+  box-shadow:var(--shadow-md);
 }
 .cred-card img{
   height:70px;
@@ -475,86 +396,97 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
   max-width:150px;
   object-fit:contain;
   margin-bottom:20px;
+  filter:grayscale(20%);
+  transition:filter 0.3s;
 }
+.cred-card:hover img{filter:grayscale(0%);}
 .cred-card h3{
-  font-size:1.4rem;
-  margin-bottom:15px;
-  color:var(--text-dark);
+  font-size:1.25rem;
+  margin-bottom:12px;
+  color:var(--navy);
+  font-weight:700;
 }
 .cred-card p{
-  color:#4a5568;
+  color:var(--muted);
   line-height:1.7;
-  font-size:0.95rem;
+  font-size:0.88rem;
 }
+
+/* ── PHILOSOPHY SECTION ─────────────────────────── */
 .philosophy-section{
-  background:rgba(0,0,0,0.02);
+  background:linear-gradient(135deg, var(--gold-soft) 0%, rgba(255,255,255,0.95) 100%);
   border-radius:40px;
   padding:60px;
-  margin:80px 0;
+  margin:60px 0;
   text-align:center;
-  border:1px solid var(--border-light);
+  border:1px solid rgba(201,160,76,0.2);
 }
 .philosophy-section h2{
-  font-size:2.2rem;
+  font-size:2rem;
   margin-bottom:20px;
-  color:var(--text-dark);
+  color:var(--navy);
 }
 .philosophy-quote{
   font-size:1.4rem;
   font-style:italic;
   color:var(--gold);
   margin-bottom:30px;
-  max-width:800px;
+  max-width:700px;
   margin-left:auto;
   margin-right:auto;
+  font-family:'Playfair Display',serif;
 }
-.philosophy-text{
-  color:#4a5568;
+.philosophy-text p{
+  color:var(--muted);
   line-height:1.8;
-  max-width:800px;
+  max-width:700px;
   margin:0 auto;
+  font-size:0.95rem;
 }
-.what-i-bring{
-  margin:80px 0;
-}
+
+/* ── WHAT WE BRING GRID ─────────────────────────── */
 .bring-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:30px;
+  margin:40px 0;
 }
 .bring-card{
-  background:var(--card-bg-dark);
+  background:var(--navy);
   border-radius:24px;
-  padding:35px;
-  transition:all 0.3s ease;
+  padding:32px;
+  transition:all 0.35s ease;
   border-left:4px solid var(--gold);
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  box-shadow:var(--shadow-sm);
 }
 .bring-card:hover{
   transform:translateY(-5px);
-  background:var(--card-bg-dark-light);
-  box-shadow:0 12px 24px rgba(0,0,0,0.15);
+  background:var(--navy2);
+  box-shadow:var(--shadow-md);
 }
 .bring-icon{
-  font-size:2.5rem;
+  font-size:2rem;
   color:var(--gold);
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 .bring-card h3{
-  font-size:1.4rem;
-  margin-bottom:10px;
-  color:var(--white);
+  font-family:'Poppins',sans-serif;
+  font-size:1.2rem;
+  margin-bottom:8px;
+  color:#fff;
+  font-weight:700;
 }
 .bring-tagline{
-  font-size:0.85rem;
+  font-size:0.8rem;
   color:var(--gold);
   margin-bottom:15px;
   font-weight:500;
+  letter-spacing:0.3px;
 }
 .bring-card p{
-  color:var(--text-light);
+  color:rgba(255,255,255,0.7);
   line-height:1.7;
-  font-size:0.9rem;
+  font-size:0.88rem;
   margin-bottom:15px;
 }
 .bring-list{
@@ -562,8 +494,8 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
   padding-left:0;
 }
 .bring-list li{
-  color:var(--text-light);
-  font-size:0.85rem;
+  color:rgba(255,255,255,0.6);
+  font-size:0.82rem;
   margin-bottom:8px;
   display:flex;
   align-items:center;
@@ -571,180 +503,259 @@ h1, h2, h3, h4, .logo h2, .logo span, .nav-links a, .btn, .hero-badge, .section-
 }
 .bring-list li i{
   color:var(--gold);
-  font-size:0.75rem;
+  font-size:0.7rem;
+  width:16px;
 }
-.trust-badge{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  margin:80px 0;
-  padding:40px;
-  border-top:1px solid var(--border-light);
-  border-bottom:1px solid var(--border-light);
-}
-.trust-item{
-  text-align:center;
-  transition:transform 0.3s ease;
-}
-.trust-item:hover{
-  transform:translateY(-5px);
-}
-.trust-item i{
-  font-size:2.5rem;
-  color:var(--gold);
-  margin-bottom:10px;
-  display:block;
-}
-.trust-item span{
-  display:block;
-  font-size:0.85rem;
-  color:#4a5568;
-}
+
+/* ── PARTNER SLIDER ──────────────────────────────── */
 .partner-slider{
-  margin:80px 0;
   text-align:center;
+  padding:60px 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.partner-slider h3{
+  font-family:'Poppins',sans-serif;
+  color:var(--muted);
+  font-size:0.75rem;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:32px;
 }
 .partner-logos{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:40px;
+  gap:50px;
   flex-wrap:wrap;
-  margin-top:30px;
 }
 .partner-item{
   text-align:center;
 }
 .partner-item img{
-  height:50px;
+  height:44px;
   width:auto;
-  max-width:120px;
+  max-width:110px;
   object-fit:contain;
-  filter:brightness(0.9);
-  transition:all 0.3s ease;
+  filter:grayscale(50%) opacity(0.7);
+  transition:all 0.3s;
 }
 .partner-item img:hover{
-  filter:brightness(1);
-  transform:scale(1.05);
+  filter:none;
+  transform:scale(1.06);
 }
 .partner-item span{
   display:block;
   margin-top:8px;
-  font-size:0.75rem;
-  color:#4a5568;
+  font-size:0.68rem;
+  color:var(--muted);
+  font-family:'Poppins',sans-serif;
 }
+
+/* ── TRUST BADGES ───────────────────────────────── */
+.trust-badge{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  margin:60px 0;
+  background:#fff;
+  border-radius:24px;
+  border:1px solid var(--border);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+}
+.trust-item{
+  text-align:center;
+  padding:32px 20px;
+  border-right:1px solid var(--border);
+  transition:background 0.3s;
+}
+.trust-item:last-child{border-right:none;}
+.trust-item:hover{background:#fafaf8;}
+.trust-item i{
+  font-size:1.8rem;
+  color:var(--gold);
+  margin-bottom:12px;
+  display:block;
+}
+.trust-item strong{
+  display:block;
+  font-family:'Poppins',sans-serif;
+  font-size:0.85rem;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:4px;
+}
+.trust-item span{
+  display:block;
+  font-size:0.75rem;
+  color:var(--muted);
+}
+
+/* ── BUTTONS ─────────────────────────────────────── */
+.btn{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--navy);padding:14px 32px;
+  border-radius:100px;text-decoration:none;
+  font-weight:700;font-size:0.88rem;
+  transition:all 0.3s ease;
+  display:inline-flex;align-items:center;gap:8px;
+  border:none;letter-spacing:0.3px;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(201,160,76,0.3);
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-gold);
+}
+.btn-outline{
+  border:1.5px solid rgba(201,160,76,0.45);
+  padding:14px 32px;border-radius:100px;
+  color:var(--text);text-decoration:none;
+  transition:all 0.3s;background:transparent;
+  font-weight:600;font-size:0.88rem;
+  cursor:pointer;display:inline-flex;
+  align-items:center;gap:8px;
+}
+.btn-outline:hover{
+  background:var(--gold-soft);
+  border-color:var(--gold);
+  transform:translateY(-3px);
+}
+
+/* ── FOOTER ─────────────────────────────────────── */
 footer{
-  background:rgba(0,0,0,0.02);
-  padding:60px 0 30px;
-  margin-top:60px;
-  border-top:1px solid var(--border-light);
+  background:var(--navy);
+  padding:70px 0 30px;
+  margin-top:0;
 }
 .footer-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
   gap:40px;
-  margin-bottom:40px;
+  margin-bottom:50px;
 }
 .footer-col h4{
-  color:var(--gold);
-  margin-bottom:20px;
-  font-size:1.1rem;
+  font-family:'Poppins',sans-serif;
+  color:#fff;margin-bottom:18px;font-size:0.9rem;
+  font-weight:700;letter-spacing:0.3px;
 }
 .footer-col a{
-  display:block;
-  color:#4a5568;
-  text-decoration:none;
-  margin-bottom:12px;
-  transition:.3s;
-  font-size:0.85rem;
+  display:block;color:rgba(255,255,255,0.5);
+  text-decoration:none;margin-bottom:10px;
+  transition:all 0.25s;font-size:0.82rem;
 }
-.footer-col a:hover{
-  color:var(--gold);
-  padding-left:5px;
-}
+.footer-col a:hover{color:var(--gold);padding-left:4px;}
 .footer-col p{
-  color:#4a5568;
-  font-size:0.85rem;
-  margin-bottom:10px;
+  color:rgba(255,255,255,0.5);font-size:0.82rem;
+  margin-bottom:8px;line-height:1.6;
 }
-.hours{
-  font-size:0.85rem;
-  color:#4a5568;
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.footer-logo img{height:55px;filter:brightness(1.1);}
+.footer-logo-name{
+  font-family:'Poppins',sans-serif;font-weight:800;
+  font-size:1.05rem;color:#fff;
 }
-.hours p{
-  margin-bottom:6px;
+.footer-logo-tagline{
+  font-size:0.6rem;color:var(--gold);
+  letter-spacing:1.5px;text-transform:uppercase;
+  font-family:'Poppins',sans-serif;
 }
-.social-links{
-  display:flex;
-  gap:12px;
-  margin-top:15px;
-}
+.social-links{display:flex;gap:10px;margin-top:18px;}
 .social-links a{
-  width:34px;
-  height:34px;
-  background:rgba(0,0,0,0.05);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--text-dark);
-  text-decoration:none;
-  transition:.3s;
+  width:36px;height:36px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:10px;display:flex;
+  align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.6);text-decoration:none;
+  transition:all 0.25s;font-size:0.85rem;
+  margin-bottom:0;
 }
 .social-links a:hover{
-  background:var(--gold);
-  color:var(--white);
-  transform:translateY(-3px);
+  background:var(--gold);color:#fff;
+  border-color:var(--gold);
+  transform:translateY(-3px);padding-left:0;
+}
+.footer-divider{
+  height:1px;background:rgba(255,255,255,0.07);
+  margin-bottom:24px;
 }
 .copyright{
-  text-align:center;
-  padding-top:30px;
-  border-top:1px solid var(--border-light);
-  color:#4a5568;
-  font-size:0.8rem;
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:10px;
+  color:rgba(255,255,255,0.35);font-size:0.76rem;
 }
-.reveal{
-  opacity:0;
-  transform:translateY(30px);
-  transition:all 0.8s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
+.copyright a{color:var(--gold);text-decoration:none;}
+
+/* ── WHATSAPP FLOAT ──────────────────────────────── */
 .whatsapp{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  width:55px;
-  height:55px;
+  position:fixed;bottom:28px;right:28px;
+  width:54px;height:54px;background:#25D366;
+  border-radius:50%;display:flex;
+  align-items:center;justify-content:center;
+  text-decoration:none;color:#fff;
+  font-size:1.5rem;z-index:997;
+  box-shadow:0 8px 24px rgba(37,211,102,0.4);
+  transition:all 0.3s;
+}
+.whatsapp:hover{transform:scale(1.1);box-shadow:0 12px 32px rgba(37,211,102,0.5);}
+.whatsapp-pulse{
+  position:absolute;inset:0;border-radius:50%;
   background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  color:white;
-  font-size:1.6rem;
-  z-index:999;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:all 0.3s ease;
+  animation:wpulse 2s ease-out infinite;z-index:-1;
 }
-.whatsapp:hover{
-  transform:scale(1.1);
+@keyframes wpulse{
+  0%{transform:scale(1);opacity:0.7;}
+  100%{transform:scale(1.8);opacity:0;}
 }
-#progress-bar{
-  position:fixed;
-  top:0;left:0;
-  height:3px;
-  background:linear-gradient(90deg,var(--gold),var(--gold2));
-  z-index:9999;
-  width:0%;
-  transition:width 0.1s linear;
+
+/* ── SCROLL REVEAL ───────────────────────────────── */
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity 0.65s ease,transform 0.65s ease;
 }
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+
+/* ── MOBILE RESPONSIVE ───────────────────────────── */
 @media(max-width:980px){
-  .page-hero h1{font-size:2.8rem;}
+  .menu-toggle{display:flex;}
+  .nav-links{
+    position:fixed;top:0;left:-100%;
+    width:82%;height:100vh;
+    background:#fff;
+    flex-direction:column;align-items:flex-start;
+    justify-content:flex-start;
+    padding:80px 32px 40px;
+    transition:left 0.35s cubic-bezier(0.4,0,0.2,1);
+    gap:6px;z-index:997;
+    border-right:1px solid var(--border);
+    box-shadow:8px 0 30px rgba(0,0,0,0.12);
+  }
+  .nav-links.active{left:0;}
+  .nav-overlay{
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.4);
+    z-index:996;opacity:0;pointer-events:none;
+    transition:opacity 0.3s;
+  }
+  .nav-overlay.active{opacity:1;pointer-events:all;}
+  .nav-links a{
+    width:100%;padding:13px 16px;
+    border-radius:12px;font-size:1rem;
+  }
+  .nav-links a:hover{background:var(--gold-soft);}
+  .nav-links a::after{display:none;}
+  .nav-cta{
+    margin-top:10px;width:100%;
+    justify-content:center;text-align:center;
+  }
+  .page-hero h1{font-size:2.5rem;}
   .about-story{grid-template-columns:1fr;}
   .timeline-vertical{padding-left:20px;}
   .timeline-vertical::before{left:10px;}
@@ -753,118 +764,113 @@ footer{
   .timeline-dot i{font-size:1rem;}
   .credentials-grid{grid-template-columns:1fr;}
   .bring-grid{grid-template-columns:1fr;}
-  .nav-links{
-    position:fixed;
-    top:90px;
-    left:-100%;
-    width:80%;
-    height:calc(100vh - 90px);
-    background:var(--white);
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    padding-top:40px;
-    transition:left 0.3s ease;
-    gap:25px;
-    z-index:998;
-    border-right:1px solid var(--border-light);
-  }
-  .nav-links.active{
-    left:0;
-  }
-  .menu-toggle{
-    display:block;
-  }
-  body{cursor:auto;}
-  .cursor-dot,.cursor-ring{display:none;}
-  .navbar{top:61px;}
-  .navbar.scrolled{top:0;}
+  .trust-badge{grid-template-columns:repeat(2,1fr);}
+  .trust-item:nth-child(2){border-right:none;}
+  .trust-item:nth-child(3){border-top:1px solid var(--border);}
+  .trust-item:nth-child(4){border-top:1px solid var(--border);border-right:none;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .logo img{height:72px;}
+  .logo-name{font-size:1.05rem;}
   .philosophy-section{padding:40px 25px;}
 }
 @media(max-width:600px){
-  .page-hero h1{font-size:2rem;}
+  .page-hero h1{font-size:1.8rem;}
   .container{padding:0 20px;}
-  .top-bar .container{justify-content:center;}
-  .navbar{top:78px;}
+  .top-contact-bar .container{justify-content:center;gap:16px;flex-wrap:wrap;}
+  .about-story-image-badge{display:none;}
+  .philosophy-quote{font-size:1.1rem;}
+  .trust-badge{grid-template-columns:1fr;}
+  .trust-item{border-right:none;border-bottom:1px solid var(--border);}
+  .trust-item:last-child{border-bottom:none;}
+  .footer-grid{grid-template-columns:1fr;}
+  .logo img{height:56px;}
+  .logo-name{font-size:0.95rem;}
+  .logo-tagline{display:none;}
+  .bring-card{padding:25px;}
 }
 </style>
 </head>
 <body>
 <div id="progress-bar"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-<div class="spotlight" id="spotlight"></div>
-<canvas id="particles"></canvas>
+<div class="nav-overlay" id="navOverlay"></div>
 
-<div class="top-bar">
+<!-- TOP BAR -->
+<div class="top-contact-bar">
   <div class="container">
-    <div class="top-contact">
-      <a href="tel:+254702741067"><i class="fas fa-phone-alt"></i> +254 702 741 067</a>
-      <a href="mailto:consult@fredndonga.co.ke"><i class="fas fa-envelope"></i> consult@fredndonga.co.ke</a>
-    </div>
+    <a href="tel:+254702741067"><i class="fas fa-phone-alt"></i> +254 702 741 067</a>
+    <a href="mailto:consult@primeconsulting.co.ke"><i class="fas fa-envelope"></i> consult@primeconsulting.co.ke</a>
   </div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="container nav-inner">
-    <div class="logo">
-      <img src="https://i.postimg.cc/V6Fx2f0R/logo-fred.png" alt="Fred Ndonga">
-      <div>
-        <h2>FRED NDONGA</h2>
-        <span>HOSPITALITY CONSULTANT</span>
+    <a href="index.html#home" class="logo">
+      <img src="https://res.cloudinary.com/dvqjgbdhp/image/upload/v1780431597/ChatGPT_Image_Jun_2_2026_11_17_46_PM_k1gh3t.png" alt="Prime Consulting Group">
+      <div class="logo-text">
+        <span class="logo-name">Prime Consulting Group</span>
+        <span class="logo-tagline">Hospitality Consultants · Kenya</span>
       </div>
-    </div>
-    <div class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bars"></i>
-    </div>
+    </a>
+    <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
     <div class="nav-links" id="navLinks">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="blog.html">Insights</a>
-  <a href="contact.html">Contact</a>
-</div>
+      <a href="index.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Insights</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#contact" class="nav-cta">Book Consultation</a>
+    </div>
   </div>
 </nav>
 
 <main>
-  <section class="page-hero container">
-    <div class="reveal">
-      <h1>About Fred Ndonga</h1>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container reveal">
+      <h1>About <span>Prime Consulting Group</span></h1>
       <p>From the floor to the boardroom — a career built on real hospitality experience.</p>
     </div>
   </section>
 
+  <!-- ABOUT STORY -->
   <div class="container">
     <div class="about-story reveal">
       <div class="about-story-image">
-        <img src="https://i.postimg.cc/jjhW3fcH/certified.png" alt="Fred Ndonga">
+        <img src="https://i.postimg.cc/jjhW3fcH/certified.png" alt="Prime Consulting Group Team">
+        <div class="about-story-image-badge">
+          <i class="fas fa-certificate"></i>
+          <span>Kenya Utalii College<br>Certified</span>
+        </div>
       </div>
       <div class="about-story-content">
-        <h2>I started at the bottom. I know your world.</h2>
-        <p>Before I became a trainer or a consultant, I was on the floor — clearing plates, serving tables, handling angry guests at 6 AM. That experience taught me something no textbook could: great hospitality isn't about fancy policies. It's about consistency, pride, and systems that actually work.</p>
-        <p>Over the past decade, I worked my way through Sarova Hotels — from the front lines to training new teams. I earned my Trainer of Trainers certification from Kenya Utalii College and built a reputation for turning chaotic operations into smooth-running departments.</p>
-        <p>Today, I work with hotel owners, restaurant founders, and resort operators across Kenya. I don't hand you a report and disappear. I stand beside your team, fix what's broken, and teach your people to run better shifts — long after I'm gone.</p>
-        <div class="story-signature">— Fred Ndonga</div>
+        <div class="section-label">Our Story</div>
+        <h2>We started on the floor. We know your world.</h2>
+        <p>Before we became trainers or consultants, we were on the floor — clearing plates, serving tables, handling angry guests at 6 AM. That experience taught us something no textbook could: great hospitality isn't about fancy policies. It's about consistency, pride, and systems that actually work.</p>
+        <p>Over the past decade, we worked our way through Sarova Hotels — from the front lines to training new teams. We earned Trainer of Trainers certification from Kenya Utalii College and built a reputation for turning chaotic operations into smooth-running departments.</p>
+        <p>Today, we work with hotel owners, restaurant founders, and resort operators across Kenya. We don't hand you a report and disappear. We stand beside your team, fix what's broken, and teach your people to run better shifts — long after we're gone.</p>
+        <div class="story-signature">— Prime Consulting Group</div>
       </div>
     </div>
   </div>
 
+  <!-- TIMELINE -->
   <div class="container">
     <div class="section-header reveal">
-      <h2>My Journey</h2>
+      <div class="section-label">Our Journey</div>
+      <h2>The Path to Excellence</h2>
       <div class="section-divider"></div>
     </div>
     <div class="timeline-vertical">
-      <div class="timeline-node reveal">
+      <div class="timeline-node reveal reveal-delay-1">
         <div class="timeline-dot"><i class="fas fa-utensils"></i></div>
         <div class="timeline-content">
           <div class="timeline-year">2013 - 2018</div>
           <h3>The Front Line</h3>
-          <p>Serving tables, managing guest complaints, learning what actually works in real hospitality environments. This is where I built my foundation.</p>
+          <p>Serving tables, managing guest complaints, learning what actually works in real hospitality environments. This is where we built our foundation.</p>
         </div>
       </div>
-      <div class="timeline-node reveal">
+      <div class="timeline-node reveal reveal-delay-2">
         <div class="timeline-dot"><i class="fas fa-hotel"></i></div>
         <div class="timeline-content">
           <div class="timeline-year">2019 - 2023</div>
@@ -872,117 +878,123 @@ footer{
           <p>Worked across multiple properties including Sarova Lion Hill and Sarova Woodlands. Promoted through service excellence and started training new teams.</p>
         </div>
       </div>
-      <div class="timeline-node reveal">
+      <div class="timeline-node reveal reveal-delay-3">
         <div class="timeline-dot"><i class="fas fa-chalkboard-user"></i></div>
         <div class="timeline-content">
           <div class="timeline-year">2023 - Present</div>
-          <h3>Independent Consultant</h3>
+          <h3>Prime Consulting Group</h3>
           <p>Now helping hospitality businesses across Kenya build systems, train teams, and grow sustainably. From one hotel to 85+ establishments.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="section-header reveal">
-      <h2>Credentials & Certifications</h2>
-      <div class="section-sub">Recognized by Kenya's leading hospitality institutions</div>
-      <div class="section-divider"></div>
-    </div>
-    <div class="credentials-grid">
-      <div class="cred-card reveal">
-        <img src="https://i.postimg.cc/ZqF9sQ4m/certified-trainer.png" alt="Trainer of Trainers">
-        <h3>Trainer of Trainers</h3>
-        <p>Certified by Sarova Woodlands Hotel & Spa — qualified to train hospitality staff at all levels.</p>
+  <!-- CREDENTIALS -->
+  <div class="section-wrap" style="background:#fff;">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Our Credentials</div>
+        <h2>Certifications & Education</h2>
+        <p class="section-sub">Recognized by Kenya's leading hospitality institutions</p>
+        <div class="section-divider"></div>
       </div>
-      <div class="cred-card reveal">
-        <img src="https://i.postimg.cc/QC00jv0z/kenya-utalii-college-logo.jpg" alt="Kenya Utalii College">
-        <h3>Kenya Utalii College</h3>
-        <p>Advanced certifications in Food & Beverage Control, Banqueting & Events Supervision, and Hospitality Operations.</p>
-      </div>
-      <div class="cred-card reveal">
-        <img src="https://i.postimg.cc/jqZXn048/University-of-Eldoret250.png" alt="University of Eldoret">
-        <h3>University of Eldoret</h3>
-        <p>Bachelor of Science in Food Operations Management — academic foundation paired with practical experience.</p>
-      </div>
-      <div class="cred-card reveal">
-        <img src="https://i.postimg.cc/zXXkCnwH/certification.webp" alt="Professional Certifications">
-        <h3>Professional Certifications</h3>
-        <p>HACCP certified, Food safety management, and Service excellence standards.</p>
+      <div class="credentials-grid">
+        <div class="cred-card reveal reveal-delay-1">
+          <img src="https://i.postimg.cc/ZqF9sQ4m/certified-trainer.png" alt="Trainer of Trainers">
+          <h3>Trainer of Trainers</h3>
+          <p>Certified by Sarova Woodlands Hotel & Spa — qualified to train hospitality staff at all levels.</p>
+        </div>
+        <div class="cred-card reveal reveal-delay-2">
+          <img src="https://i.postimg.cc/QC00jv0z/kenya-utalii-college-logo.jpg" alt="Kenya Utalii College">
+          <h3>Kenya Utalii College</h3>
+          <p>Advanced certifications in Food & Beverage Control, Banqueting & Events Supervision, and Hospitality Operations.</p>
+        </div>
+        <div class="cred-card reveal reveal-delay-3">
+          <img src="https://i.postimg.cc/jqZXn048/University-of-Eldoret250.png" alt="University of Eldoret">
+          <h3>University of Eldoret</h3>
+          <p>Bachelor of Science in Food Operations Management — academic foundation paired with practical experience.</p>
+        </div>
+        <div class="cred-card reveal reveal-delay-4">
+          <img src="https://i.postimg.cc/zXXkCnwH/certification.webp" alt="Professional Certifications">
+          <h3>Professional Certifications</h3>
+          <p>HACCP certified, Food safety management, and Service excellence standards.</p>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- PHILOSOPHY -->
   <div class="container">
     <div class="philosophy-section reveal">
-      <h2>My Philosophy</h2>
+      <h2>Our Philosophy</h2>
       <div class="philosophy-quote">"Hospitality isn't about manuals. It's about people."</div>
       <div class="philosophy-text">
-        <p>I believe great service comes from three things: clear systems, well-trained staff, and a culture of pride. I don't write binders that collect dust. I build workflows your team will actually use.</p>
-        <p style="margin-top:20px;">I coach your managers and train your trainers. When I leave, you run better than before I arrived. That's the only measure of success that matters to me.</p>
+        <p>We believe great service comes from three things: clear systems, well-trained staff, and a culture of pride. We don't write binders that collect dust. We build workflows your team will actually use.</p>
+        <p style="margin-top:20px;">We coach your managers and train your trainers. When we leave, you run better than before we arrived. That's the only measure of success that matters to us.</p>
       </div>
     </div>
   </div>
 
+  <!-- WHAT WE BRING -->
   <div class="container">
     <div class="section-header reveal">
-      <h2>What I Bring to Your Business</h2>
-      <div class="section-sub">Practical value. Real results. No corporate fluff.</div>
+      <div class="section-label">Our Value</div>
+      <h2>What We Bring to Your Business</h2>
+      <p class="section-sub">Practical value. Real results. No corporate fluff.</p>
       <div class="section-divider"></div>
     </div>
-    <div class="what-i-bring">
-      <div class="bring-grid">
-        <div class="bring-card reveal">
-          <div class="bring-icon"><i class="fas fa-chalkboard-user"></i></div>
-          <h3>Hands-On Training</h3>
-          <div class="bring-tagline">Theory is useless without execution.</div>
-          <p>I don't lecture. I stand beside your staff on the floor, show them what works, and drill it until it becomes habit.</p>
-          <ul class="bring-list">
-            <li><i class="fas fa-check-circle"></i> Service flow drills</li>
-            <li><i class="fas fa-check-circle"></i> Complaint handling roleplay</li>
-            <li><i class="fas fa-check-circle"></i> Real-time floor coaching</li>
-          </ul>
-        </div>
-        <div class="bring-card reveal">
-          <div class="bring-icon"><i class="fas fa-tasks"></i></div>
-          <h3>Operational Systems</h3>
-          <div class="bring-tagline">Chaos costs you money and reputation.</div>
-          <p>I audit your current operations and install simple, trackable systems that your team will actually follow.</p>
-          <ul class="bring-list">
-            <li><i class="fas fa-check-circle"></i> Daily checklists that work</li>
-            <li><i class="fas fa-check-circle"></i> Standard operating procedures</li>
-            <li><i class="fas fa-check-circle"></i> Quality control checkpoints</li>
-          </ul>
-        </div>
-        <div class="bring-card reveal">
-          <div class="bring-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Revenue Protection</h3>
-          <div class="bring-tagline">Happy guests come back. Unhappy ones tell everyone.</div>
-          <p>I help you reduce complaints, increase repeat bookings, and build a reputation that sells itself.</p>
-          <ul class="bring-list">
-            <li><i class="fas fa-check-circle"></i> Guest experience audit</li>
-            <li><i class="fas fa-check-circle"></i> Service recovery protocols</li>
-            <li><i class="fas fa-check-circle"></i> Repeat booking strategies</li>
-          </ul>
-        </div>
-        <div class="bring-card reveal">
-          <div class="bring-icon"><i class="fas fa-users"></i></div>
-          <h3>Leadership Development</h3>
-          <div class="bring-tagline">Your managers are your most valuable asset.</div>
-          <p>I coach your supervisors and department heads to lead confidently, handle pressure, and train their own teams.</p>
-          <ul class="bring-list">
-            <li><i class="fas fa-check-circle"></i> Shift management skills</li>
-            <li><i class="fas fa-check-circle"></i> Team motivation techniques</li>
-            <li><i class="fas fa-check-circle"></i> Trainer of Trainers certification</li>
-          </ul>
-        </div>
+    <div class="bring-grid">
+      <div class="bring-card reveal reveal-delay-1">
+        <div class="bring-icon"><i class="fas fa-chalkboard-user"></i></div>
+        <h3>Hands-On Training</h3>
+        <div class="bring-tagline">Theory is useless without execution.</div>
+        <p>We don't lecture. We stand beside your staff on the floor, show them what works, and drill it until it becomes habit.</p>
+        <ul class="bring-list">
+          <li><i class="fas fa-check-circle"></i> Service flow drills</li>
+          <li><i class="fas fa-check-circle"></i> Complaint handling roleplay</li>
+          <li><i class="fas fa-check-circle"></i> Real-time floor coaching</li>
+        </ul>
+      </div>
+      <div class="bring-card reveal reveal-delay-2">
+        <div class="bring-icon"><i class="fas fa-tasks"></i></div>
+        <h3>Operational Systems</h3>
+        <div class="bring-tagline">Chaos costs you money and reputation.</div>
+        <p>We audit your current operations and install simple, trackable systems that your team will actually follow.</p>
+        <ul class="bring-list">
+          <li><i class="fas fa-check-circle"></i> Daily checklists that work</li>
+          <li><i class="fas fa-check-circle"></i> Standard operating procedures</li>
+          <li><i class="fas fa-check-circle"></i> Quality control checkpoints</li>
+        </ul>
+      </div>
+      <div class="bring-card reveal reveal-delay-3">
+        <div class="bring-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Revenue Protection</h3>
+        <div class="bring-tagline">Happy guests come back. Unhappy ones tell everyone.</div>
+        <p>We help you reduce complaints, increase repeat bookings, and build a reputation that sells itself.</p>
+        <ul class="bring-list">
+          <li><i class="fas fa-check-circle"></i> Guest experience audit</li>
+          <li><i class="fas fa-check-circle"></i> Service recovery protocols</li>
+          <li><i class="fas fa-check-circle"></i> Repeat booking strategies</li>
+        </ul>
+      </div>
+      <div class="bring-card reveal reveal-delay-4">
+        <div class="bring-icon"><i class="fas fa-users"></i></div>
+        <h3>Leadership Development</h3>
+        <div class="bring-tagline">Your managers are your most valuable asset.</div>
+        <p>We coach your supervisors and department heads to lead confidently, handle pressure, and train their own teams.</p>
+        <ul class="bring-list">
+          <li><i class="fas fa-check-circle"></i> Shift management skills</li>
+          <li><i class="fas fa-check-circle"></i> Team motivation techniques</li>
+          <li><i class="fas fa-check-circle"></i> Trainer of Trainers certification</li>
+        </ul>
       </div>
     </div>
   </div>
 
+  <!-- PARTNERS -->
   <div class="container">
     <div class="partner-slider reveal">
-      <h3 style="color:var(--gold); font-size:1.6rem;">Trusted By & Trained At</h3>
+      <h3>Trusted By & Trained At</h3>
       <div class="partner-logos">
         <div class="partner-item"><img src="https://i.postimg.cc/7ZQd3J1G/sarova.png" alt="Sarova Hotels"><span>Sarova Hotels</span></div>
         <div class="partner-item"><img src="https://i.postimg.cc/QC00jv0z/kenya-utalii-college-logo.jpg" alt="Kenya Utalii College"><span>Kenya Utalii College</span></div>
@@ -992,138 +1004,113 @@ footer{
     </div>
   </div>
 
+  <!-- TRUST BADGES -->
   <div class="container">
     <div class="trust-badge reveal">
-      <div class="trust-item"><i class="fas fa-handshake"></i><span>Worked with Sarova Hotels</span></div>
-      <div class="trust-item"><i class="fas fa-certificate"></i><span>Kenya Utalii College Certified</span></div>
-      <div class="trust-item"><i class="fas fa-chalkboard-user"></i><span>Trainer of Trainers</span></div>
-      <div class="trust-item"><i class="fas fa-globe"></i><span>Nationwide Coverage</span></div>
+      <div class="trust-item"><i class="fas fa-handshake"></i><strong>Sarova Hotels</strong><span>Worked with the best</span></div>
+      <div class="trust-item"><i class="fas fa-certificate"></i><strong>Utalii Certified</strong><span>Kenya Utalii College</span></div>
+      <div class="trust-item"><i class="fas fa-chalkboard-user"></i><strong>Trainer of Trainers</strong><span>Recognised credential</span></div>
+      <div class="trust-item"><i class="fas fa-globe-africa"></i><strong>Nationwide</strong><span>Coverage across Kenya</span></div>
     </div>
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col"><h4>Fred Ndonga</h4><p>Hospitality Service & Operations Consultant</p><div class="social-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div></div>
-      <div class="footer-col"><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Insights</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><h4>Resources</h4><a href="#">Consultation Guide</a><a href="#">Hospitality Blog</a><a href="#">Client Success Stories</a><a href="#">Training Programs</a></div>
-      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-phone"></i> +254 702 741 067</p><p><i class="fas fa-envelope"></i> consult@fredndonga.co.ke</p><p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p><div class="hours"><p><strong>Office Hours:</strong></p><p>Mon - Fri: 8am - 5pm</p><p>Saturday: 9am - 1pm</p><p>Sunday: Closed</p></div></div>
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://res.cloudinary.com/dvqjgbdhp/image/upload/v1780431597/ChatGPT_Image_Jun_2_2026_11_17_46_PM_k1gh3t.png" alt="Prime Consulting Group">
+          <div>
+            <div class="footer-logo-name">Prime Consulting Group</div>
+            <div class="footer-logo-tagline">Hospitality Consultants · Kenya</div>
+          </div>
+        </div>
+        <p>Helping Kenya's hospitality industry build service cultures and profitable operations since 2015.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html#home">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Insights</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Consultation Guide</a>
+        <a href="#">Hospitality Blog</a>
+        <a href="#">Client Success Stories</a>
+        <a href="#">Training Programs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone" style="color:var(--gold);margin-right:8px;"></i> +254 702 741 067</p>
+        <p><i class="fas fa-envelope" style="color:var(--gold);margin-right:8px;"></i> consult@primeconsulting.co.ke</p>
+        <p style="margin-top:16px;"><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:8px;"></i> Nairobi, Kenya</p>
+      </div>
     </div>
-    <div class="copyright"><p>© 2025 Fred Ndonga Hospitality Consultancy. All rights reserved.</p></div>
+    <div class="footer-divider"></div>
+    <div class="copyright">
+      <span>© 2025 Prime Consulting Group. All rights reserved.</span>
+      <span>Hospitality Excellence · <a href="#">Back to top ↑</a></span>
+    </div>
   </div>
 </footer>
-  
-<a href="https://wa.me/254702741067" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+<a href="https://wa.me/254702741067" class="whatsapp" target="_blank">
+  <div class="whatsapp-pulse"></div>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <script>
+// Progress bar
 const progressBar = document.getElementById('progress-bar');
-if(progressBar){
-  window.addEventListener('scroll', () => {
-    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    progressBar.style.width = scrolled + '%';
-  });
-}
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  if(progressBar) progressBar.style.width = pct + '%';
+});
+
+// Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 80);
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
-const dot = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
-let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX; mouseY = e.clientY;
-  if(dot){ dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px'; }
-  const spotlight = document.getElementById('spotlight');
-  if(spotlight){ spotlight.style.left = mouseX + 'px'; spotlight.style.top = mouseY + 'px'; }
-});
-function animateRing() {
-  if(!ring) return;
-  ringX += (mouseX - ringX) * 0.12;
-  ringY += (mouseY - ringY) * 0.12;
-  ring.style.left = ringX + 'px';
-  ring.style.top = ringY + 'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
-document.querySelectorAll('a, button, .timeline-node, .cred-card, .bring-card, .trust-item').forEach(el => {
-  if(!ring) return;
-  el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-  el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
-});
-const canvas = document.getElementById('particles');
-if(canvas){
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  resize();
-  window.addEventListener('resize', resize);
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.3;
-      this.speedY = (Math.random() - 0.5) * 0.3;
-      this.opacity = Math.random() * 0.3 + 0.1;
-      this.gold = Math.random() > 0.8;
-    }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.gold ? `rgba(201,160,76,${this.opacity})` : `rgba(100,100,100,${this.opacity * 0.15})`;
-      ctx.fill();
-    }
-  }
-  for (let i = 0; i < 80; i++) particles.push(new Particle());
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(animateParticles);
-  }
-  animateParticles();
-}
-function reveal() {
-  document.querySelectorAll('.reveal').forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) el.classList.add('active');
-  });
-}
-window.addEventListener('scroll', reveal);
-reveal();
+
+// Mobile menu
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
-if(menuToggle && navLinks){
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-    if(icon){
-      if(navLinks.classList.contains('active')){
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-      } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
-    }
-  });
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      const icon = menuToggle.querySelector('i');
-      if(icon){
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
-    });
-  });
+const navOverlay = document.getElementById('navOverlay');
+
+function openMenu(){
+  navLinks.classList.add('active');
+  navOverlay.classList.add('active');
+  menuToggle.querySelector('i').className = 'fas fa-times';
 }
+function closeMenu(){
+  navLinks.classList.remove('active');
+  navOverlay.classList.remove('active');
+  menuToggle.querySelector('i').className = 'fas fa-bars';
+}
+if(menuToggle){
+  menuToggle.addEventListener('click', () => navLinks.classList.contains('active') ? closeMenu() : openMenu());
+}
+if(navOverlay) navOverlay.addEventListener('click', closeMenu);
+document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', closeMenu));
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.12});
+revealEls.forEach(el => revealObserver.observe(el));
 </script>
 </body>
 </html>
